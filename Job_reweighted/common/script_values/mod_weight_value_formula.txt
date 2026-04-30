@@ -1,0 +1,142 @@
+# change the formula to use pow instead of mult.
+# exponentiation heighten differences better, despite bigger values.
+
+mod_base_pop_job_weight_bonus = {
+	base = 0
+	add = modifier:pop_$JOB$_bonus_workforce_mult
+	add = modifier:pop_cat_$POP_CAT$_bonus_workforce_mult
+	mult = 10000
+	min = -10
+}
+
+mod_army_bonus_weight = {
+	base = 0
+	add = modifier:army_defense_damage_mult
+	add = modifier:army_damage_mult
+	add = modifier:army_health
+	mult = 100
+	min = -0.1
+}
+
+elite_job_reweight = {
+	base = 1
+	mult = value:job_weights_modifier|JOB|$JOB$|RESOURCE|$RESOURCE$|
+	
+	modifier = {
+		add = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|elite|
+	}
+}
+
+specialist_job_reweight = { # does not cover all specialist jobs
+	base = 1
+
+	modifier = {
+		add = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|specialist|
+	}
+	modifier = {
+		mult = 0.02
+		has_citizenship_rights = no
+		is_shackled_robot_species_rights = no
+	}
+	modifier = {
+		mult = 0.1
+		is_enslaved = yes
+		has_slavery_type = { type = slavery_indentured }
+	}
+	modifier = {
+		mult = 0.01
+		can_take_servant_job = yes
+	}
+}
+
+army_damage_focus_job = {
+	base = 1
+
+	modifier = {
+		add = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|$POP_CAT$|
+	}
+	modifier = {
+		mult = value:mod_army_bonus_weight
+	}
+	modifier = {
+		mult = 0.01
+		can_take_servant_job = yes
+	}
+	modifier = {
+		mult = 0.1
+		is_enslaved = yes
+		NOT = { has_slavery_type = { type = slavery_military } }
+	}
+	modifier = {
+		mult = 10
+		is_enslaved = yes
+		has_slavery_type = { type = slavery_military } 
+	}
+}
+
+worker_job_reweight = {
+	base = 1
+	mult = value:job_weights_modifier|JOB|$JOB$|RESOURCE|$RESOURCE$|
+
+	modifier = {
+		add = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|worker|
+	}
+	modifier = {
+		can_take_servant_job = yes
+		mult = 0.25
+	}
+
+	modifier = {
+		OR = {
+			is_enslaved = yes
+			is_shackled_robot = yes
+			is_non_sapient_robot = yes
+		}
+		can_take_servant_job = no
+		mult = 100
+	}
+
+	modifier = {
+		mult = 5
+		has_trait = trait_cyborg_creed_of_labor
+	}
+
+	modifier = {
+		factor = 3
+		exists = planet
+		planet = {
+			has_available_jobs = $JOB$
+		}
+		exists = owner
+		owner = {
+			has_monthly_income = {
+				resource = $RESOURCE$
+				value < 10
+			}
+		}
+	}
+}
+
+worker_sr_job_reweight = {
+	base = 10
+	mult = value:job_weights_modifier|JOB|$JOB$|RESOURCE|$RESOURCE$|
+
+	modifier = {
+		add = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|worker|
+	}
+
+	modifier = {
+		mult = 10
+		OR ={
+			AND = {
+				is_enslaved = yes
+				NOT = {has_slavery_type = { type = slavery_indentured }}
+			}
+			is_shackled_robot_species_rights = yes
+		}
+	}
+	modifier = {
+		mult = 0.01
+		can_take_servant_job = yes
+	}
+}

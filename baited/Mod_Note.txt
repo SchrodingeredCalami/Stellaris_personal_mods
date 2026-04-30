@@ -1,0 +1,7 @@
+# This mod is for custom settings, more specific, to loosen hard limits:
+# 1. increased logistics growth ceiling ceiling, 
+# 2. Migration not requiring empty jobs (needed workaround)
+# 3. Pop group collapsing threshold
+# 
+# It also has defined graphics to help with less clutter in error logs.
+# I used wrangler graphics, because the immigrants got baited.
