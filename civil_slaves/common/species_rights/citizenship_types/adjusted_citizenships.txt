@@ -88,7 +88,7 @@ citizenship_limited = {
 					limit = {
 						has_citizenship_type = { type = citizenship_full country = from }
 						is_same_species = from # Don't break xenophobia yet
-						NOT = {is_same_species = root} # exclude current pop
+						NOT = {is_exact_same_species = root} # exclude current pop
 					}
 					count >= 1
 				}
@@ -234,7 +234,7 @@ citizenship_slavery = {
 					limit = {
 						has_citizenship_type = { type = citizenship_full country = from }
 						is_same_species = from # Don't break xenophobia yet
-						NOT = {is_same_species = root} # exclude current pop
+						NOT = {is_exact_same_species = root} # exclude current subspecies
 					}
 					count >= 1
 				}
