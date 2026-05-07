@@ -1,0 +1,117 @@
+complex_drone = {
+	rank = 3
+	change_job_threshold = 1.01
+
+	weight = {
+		weight = 2
+		modifier = {
+			OR = {
+				is_sapient = no
+				has_trait = trait_syncretic_proles
+			}
+			weight = -1
+		}
+	}
+
+	automation_resources = {
+		category = planet_automated_jobs
+		upkeep = {
+			energy = @automation_upkeep_complex
+		}
+	}
+
+	pop_group_modifier = {
+		pop_housing_usage_base = 1
+		pop_amenities_usage_no_happiness_base = 1
+	}
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = yes
+	}
+
+	inline_script = "pop_categories/resettlement_costs"
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_shroud_forged
+		}
+		planet_crime_no_happiness_add = 1.5
+	}
+
+	# Triggered Modifiers
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
+
+	resources = {
+		category = pop_category_drones
+	}
+}
+
+simple_drone = {
+	rank = 2
+	change_job_threshold = 1.01
+
+	weight = {
+		weight = 1
+	}
+
+	automation_resources = {
+		category = planet_automated_jobs
+		upkeep = {
+			energy = @automation_upkeep_simple
+		}
+	}
+
+	pop_group_modifier = {
+		pop_housing_usage_base = 1
+		pop_amenities_usage_no_happiness_base = 1
+	}
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = yes
+	}
+
+	inline_script = "pop_categories/resettlement_costs"
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_shroud_forged
+		}
+		planet_crime_no_happiness_add = 1.5
+	}
+
+	# Triggered Modifiers
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
+
+	resources = {
+		category = pop_category_drones
+	}
+}
+
+maintenance_drone = {
+	rank = 1
+
+	weight = {
+		weight = 0
+	}
+
+	pop_group_modifier = {
+		pop_housing_usage_base = 1
+	}
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = yes
+	}
+
+	inline_script = "pop_categories/resettlement_costs"
+
+	# Triggered Modifiers
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
+
+	resources = {
+		category = pop_category_maintenance_drones
+	}
+
+}
