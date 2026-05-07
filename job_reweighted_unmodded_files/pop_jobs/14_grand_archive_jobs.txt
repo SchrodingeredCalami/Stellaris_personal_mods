@@ -1,0 +1,446 @@
+treasure_gatherer = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+		}
+	}
+
+	tags = { energy unity minerals research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_treasure_gatherers
+		produces = {
+			energy = 10
+			minerals = 4
+			unity = 2
+			society_research = 0.5
+			trade = 3
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|energy|WEIGHT1|1.6|RESOURCE2|minerals|WEIGHT2|1.0|
+		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|unity|WEIGHT1|1|RESOURCE2|society_research|WEIGHT2|0.1|
+		mult = value:job_weights_modifier|JOB|treasure_gatherer|RESOURCE|trade|
+	}
+
+	inline_script = "jobs/automodding_priority_energy"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+#################
+# Wrangler Jobs #
+#################
+
+wrangler = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = wildlife_ranch
+		}
+		# Ranchers
+		swap_type = {
+			trigger = {
+				wrangler_is_rancher_trigger = yes
+			}
+			name = rancher
+			desc = rancher
+			icon = wrangler
+			weight = 5
+		}
+		# Trophy Hunters
+		swap_type = {
+			trigger = {
+				wrangler_is_trophy_hunter_trigger = yes
+			}
+			name = trophy_hunter
+			desc = trophy_hunter
+			icon = trophy_hunter
+			building_icon = hunting_grounds
+			weight = 5
+		}
+		# Animal Handlers
+		swap_type = {
+			trigger = {
+				wrangler_is_animal_handler_trigger = yes
+			}
+			name = animal_handler
+			desc = animal_handler
+			icon = animal_handler
+			building_icon = wildlife_sanctuary
+			weight = 5
+		}
+		# Beastfighters
+		swap_type = {
+			trigger = {
+				wrangler_is_beastfighter_trigger = yes
+			}
+			name = beastfighter
+			desc = beastfighter
+			icon = beastfighter
+			building_icon = primal_arena
+			weight = 10
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	tags = { research unity amenities }
+
+	possible = {
+		OR = {
+			owner = {
+				is_regular_empire = yes
+				has_origin = origin_primal_calling
+			}
+			planet = { has_modifier = resort_colony }
+		}
+	}
+
+	resources = {
+		category = planet_primal_jobs
+		produces = {
+			society_research = 1
+			unity = 1
+		}
+		# Trophy Hunter
+		produces = {
+			trigger = {
+				wrangler_is_trophy_hunter_trigger = yes
+				wrangler_is_beastfighter_trigger = no
+			}
+			food = 3
+			society_research = -1
+		}
+		# Animal Handlers
+		produces = {
+			trigger = {
+				wrangler_is_animal_handler_trigger = yes
+				wrangler_is_beastfighter_trigger = no
+			}
+			society_research = 0.5
+			unity = 0.5
+		}
+		# Beastfighters
+		produces = {
+			trigger = {
+				wrangler_is_beastfighter_trigger = yes
+			}
+			unity = 1
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+		# Beastfighters
+		upkeep = {
+			trigger = {
+				wrangler_is_beastfighter_trigger = yes
+			}
+			consumer_goods = -2
+			alloys = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			# Animal Handlers don't provide Amenities
+			wrangler_is_animal_handler_trigger = no
+			exists = owner
+			owner = {
+				NOT = {
+					has_valid_civic = civic_dystopian_society
+				}
+			}
+		}
+		planet_amenities_add = 400
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	# Trophy Hunter
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				wrangler_is_trophy_hunter_trigger = yes
+				wrangler_is_beastfighter_trigger = yes
+			}
+			exists = owner
+			owner = {
+				NOT = {
+					has_valid_civic = civic_dystopian_society
+				}
+			}
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|wrangler|RESOURCE|unity|FACTOR|0.25|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_robot_domestic_protocols
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			is_domestic_servant = yes
+		}
+
+		modifier = {
+			factor = 0.1
+			exists = planet
+			planet = {
+				free_amenities > 500
+			}
+		}
+
+		modifier = {
+			factor = 2
+			exists = planet
+			planet = {
+				free_amenities < 200
+				has_available_jobs = wrangler
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+}
+
+#############################
+# Wrangler Gestalt Variants #
+#############################
+drone_wrangler = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_ranch
+			icon = wrangler
+		}
+		# Hunter Drone
+		swap_type = {
+			trigger = {
+				wrangler_is_hunter_drone_trigger = yes
+			}
+			name = hunter_drone
+			desc = hunter_drone
+			icon = trophy_hunter
+			building_icon = hunting_grounds
+			weight = 5
+		}
+		# Symbiosis Integrator
+		swap_type = {
+			trigger = {
+				wrangler_is_symbiosis_integrator_trigger = yes
+			}
+			name = symbiosis_integrator
+			desc = symbiosis_integrator
+			icon = animal_handler
+			building_icon = wildlife_sanctuary
+			weight = 5
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		owner = {
+			can_think = yes
+			has_drone_wrangler_job = yes
+		}
+	}
+
+	tags = { research unity amenities }
+
+	resources = {
+		category = planet_primal_jobs
+		produces = {
+			society_research = 1
+			unity = 1
+		}
+		# Hunter Drone
+		produces = {
+			trigger = {
+				wrangler_is_hunter_drone_trigger = yes
+			}
+			food = 5
+			society_research = -1
+		}
+		# Symbiosis Integrator
+		produces = {
+			trigger = {
+				wrangler_is_symbiosis_integrator_trigger = yes
+			}
+			unity = 0.5
+			society_research = 0.5
+		}
+		upkeep = {
+			trigger = {
+				wrangler_is_beastfighter_trigger = no
+				exists = owner
+				owner = {
+					is_hive_empire = yes
+				}
+			}
+			minerals = 4
+		}
+		upkeep = {
+			trigger = {
+				wrangler_is_beastfighter_trigger = no
+				exists = owner
+				owner = {
+					is_machine_empire = yes
+				}
+			}
+			energy = 4
+		}
+		# Beastfighters
+		upkeep = {
+			trigger = {
+				wrangler_is_beastfighter_trigger = yes
+			}
+			alloys = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			wrangler_is_symbiosis_integrator_trigger = no
+			exists = planet.owner
+			planet.owner = {
+				is_gestalt = yes
+			}
+		}
+		planet_amenities_no_happiness_add = 400
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|drone_wrangler|
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+}
+
+treasure_gatherer_gestalt = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+			icon = treasure_gatherer
+		}
+	}
+
+	tags = { energy minerals unity research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_treasure_gatherers
+		produces = {
+			energy = 10
+			minerals = 4
+			unity = 2
+			society_research = 0.5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_hive_empire = yes }
+			}
+			minerals = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_machine_empire = yes }
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|treasure_gatherer_gestalt|
+	}
+
+	inline_script = "jobs/automodding_priority_energy"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
