@@ -218,8 +218,7 @@ telepath_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|telepath_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|telepath_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|telepath|RESOURCE|unity|
 	}
 }
@@ -266,8 +265,7 @@ physician_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|physician_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|physician_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|physician_drone|RESOURCE|unity|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -327,8 +325,7 @@ energy_thrall = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|energy_thrall|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|energy_thrall|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|energy_thrall|RESOURCE|unity|
 		modifier = {
 			factor = 0.2
@@ -401,8 +398,7 @@ drone_energy_thrall = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|drone_energy_thrall|POP_CAT|simple_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|drone_energy_thrall|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|drone_energy_thrall|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
@@ -490,8 +486,7 @@ test_subject = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|test_subject|POP_CAT|criminal|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|test_subject|POP_CAT|criminal|
 	}
 
 	can_set_priority = no
@@ -542,8 +537,7 @@ test_subject_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|test_subject_drone|POP_CAT|deviant_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|test_subject_drone|POP_CAT|deviant_drone|
 	}
 
 	can_set_priority = no
@@ -636,17 +630,12 @@ experiment_engineer = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|experiment_engineer|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|experiment_engineer|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|experiment_engineer|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
 		}
 		modifier = {
 			factor = 0.1
@@ -751,8 +740,7 @@ experiment_engineer_drone = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|experiment_engineer_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|experiment_engineer_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|experiment_engineer_drone|
 		modifier = {
 			factor = 0.9
@@ -815,8 +803,7 @@ slave_orderly = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|slave_orderly|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|slave_orderly|POP_CAT|worker|
 	}
 }
 
@@ -875,8 +862,7 @@ production_overseer = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|production_overseer|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|production_overseer|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|production_overseer|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -1031,8 +1017,7 @@ shroud_trader = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|shroud_trader|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|shroud_trader|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|trader|RESOURCE|trade|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		# crisis purge

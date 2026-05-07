@@ -29,8 +29,7 @@ disconnected_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|disconnected_drone|POP_CAT|simple_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|disconnected_drone|POP_CAT|simple_drone|
 		modifier = {
 			add = -5 # Reduce the stickiness factor
 			exists = planet
@@ -120,8 +119,7 @@ skywatcher = {
 
 	weight = {
 		# Copied from soldier jobs
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|skywatcher|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|skywatcher|POP_CAT|specialist|
 		modifier = {
 			factor = 10
 			exists = planet
@@ -135,18 +133,6 @@ skywatcher = {
 		modifier = {
 			factor = 2
 			has_trait = trait_resilient
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_weak
 		}
 		modifier = {
 			factor = 0.1
@@ -244,8 +230,7 @@ skywatcher_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|skywatcher_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|skywatcher_drone|POP_CAT|complex_drone|
 		# Copied from warrior drone jobs
 		modifier = {
 			factor = 10
@@ -259,18 +244,6 @@ skywatcher_drone = {
 		modifier = {
 			factor = 4
 			has_trait = trait_resilient
-		}
-		modifier = {
-			factor = 4
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_weak
 		}
 		modifier = {
 			factor = 0.9
@@ -372,8 +345,7 @@ transference_volunteer = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|transference_volunteer|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|transference_volunteer|POP_CAT|specialist|
 		mult = 2
 		mult = value:job_weights_modifier|JOB|transference_volunteer|RESOURCE|unity|
 		modifier = {
@@ -463,8 +435,7 @@ transference_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|transference_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|transference_drone|POP_CAT|complex_drone|
 		mult = 2
 		mult = value:job_weights_modifier|JOB|transference_drone|RESOURCE|unity|
 		modifier = {

@@ -9,7 +9,7 @@ complex_drone = {
 				is_sapient = no
 				has_trait = trait_syncretic_proles
 			}
-			weight = -1
+			add = -5
 		}
 	}
 

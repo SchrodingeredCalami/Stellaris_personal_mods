@@ -205,7 +205,7 @@ spawning_drone = {
 	inline_script = "output/genomic_triggered_modifiers"
 
 	weight = {
-		weight = 10
+		weight = 2
 		add = value:mod_base_pop_job_weight_bonus|JOB|spawning_drone|POP_CAT|complex_drone|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		mult = value:scripted_job_weight_shroud_forged_mult
@@ -308,7 +308,7 @@ replicator = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 2
 		add = value:mod_base_pop_job_weight_bonus|JOB|replicator|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -422,7 +422,7 @@ gestation_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 2
 		add = value:mod_base_pop_job_weight_bonus|JOB|gestation_drone|POP_CAT|complex_drone|
 		modifier = {
 			factor = 0.01 # crisis purge
@@ -500,7 +500,7 @@ evaluator = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 2
 		add = value:mod_base_pop_job_weight_bonus|JOB|evaluator|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|evaluator|RESOURCE|unity|
 		mult = value:scripted_job_weight_shroud_forged_mult
@@ -686,7 +686,7 @@ coordinator = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 2
 		add = value:mod_base_pop_job_weight_bonus|JOB|coordinator|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|coordinator|RESOURCE|unity|
 		mult = value:scripted_job_weight_shroud_forged_mult
@@ -1008,8 +1008,7 @@ calculator_physicist = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|calculator_physicist|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|calculator_physicist|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|calculator_physicist|RESOURCE|physics_research|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -1239,8 +1238,7 @@ calculator_biologist = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|calculator_biologist|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|calculator_biologist|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|calculator_biologist|RESOURCE|society_research|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -1444,8 +1442,7 @@ calculator_engineer = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|calculator_engineer|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|calculator_engineer|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|calculator_engineer|RESOURCE|engineering_research|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -1558,8 +1555,7 @@ artisan_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|artisan_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|artisan_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|artisan_drone|RESOURCE|consumer_goods|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -1677,8 +1673,7 @@ fabricator = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|fabricator|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|fabricator|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|fabricator|RESOURCE|alloys|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -1814,8 +1809,7 @@ chemist_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|chemist_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|chemist_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|chemist_drone|RESOURCE|volatile_motes|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -1917,8 +1911,7 @@ translucer_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|translucer_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|translucer_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|translucer_drone|RESOURCE|rare_crystals|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -2020,8 +2013,7 @@ gas_refiner_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|gas_refiner_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|gas_refiner_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|gas_refiner_drone|RESOURCE|exotic_gases|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -2095,8 +2087,7 @@ patrol_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|patrol_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|patrol_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|patrol_drone|RESOURCE|unity|FACTOR|0.25|
 		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
@@ -2347,8 +2338,7 @@ logistics_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|logistics_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|logistics_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|logistics_drone|RESOURCE|trade|
 		modifier = {
 			factor = 10
@@ -2514,8 +2504,7 @@ mining_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|mining_drone|POP_CAT|simple_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|mining_drone|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|mining_drone|RESOURCE|minerals|
 		modifier = {
 			factor = 1.1
@@ -2666,8 +2655,7 @@ agri_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|agri_drone|POP_CAT|simple_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|agri_drone|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|agri_drone|RESOURCE|food|
 		modifier = {
 			factor = 0.9
@@ -2818,8 +2806,7 @@ technician_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|technician_drone|POP_CAT|simple_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|technician_drone|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|technician_drone|RESOURCE|energy|
 
 		modifier = {
@@ -3015,8 +3002,7 @@ wilderness_maintenance_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|maintenance_drone|POP_CAT|maintenance_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|maintenance_drone|POP_CAT|maintenance_drone|
 	}
 }
 
@@ -3069,7 +3055,7 @@ warrior_drone = {
 	possible = { can_think = yes }
 
 	weight = {
-		weight = 5
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|warrior_drone|POP_CAT|complex_drone|
 		modifier = {
 			weight = 100
@@ -3088,18 +3074,6 @@ warrior_drone = {
 		modifier = {
 			factor = 4
 			has_trait = trait_resilient
-		}
-		modifier = {
-			factor = 4
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_weak
 		}
 		modifier = {
 			factor = 0.9
@@ -3236,8 +3210,7 @@ bath_attendant_machine = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|bath_attendant_machine|POP_CAT|simple_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|bath_attendant_machine|POP_CAT|simple_drone|
 	}
 }
 
@@ -3306,8 +3279,7 @@ polytechnic_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|polytechnic_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|polytechnic_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|polytechnic_drone|
 		modifier = {
 			factor = 0.9
@@ -3353,7 +3325,6 @@ offworld_prospector_drone = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|offworld_prospector_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|offworld_prospector_drone|POP_CAT|complex_drone|
 	}
 }

@@ -4,20 +4,10 @@
 # add = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|$STRATA$|
 
 mod_base_pop_job_weight_bonus = {
-	base = 0
+	base = 1
 	add = modifier:pop_$JOB$_bonus_workforce_mult
 	add = modifier:pop_cat_$POP_CAT$_bonus_workforce_mult
 	
-	mult = 10
-	modifier = {
-		OR = {
-			is_pop_category = slave
-			is_pop_category = robot_servant
-		}
-		add = 1
-	}
-	pow = 3
-	
-	min = -0.999 # Deprioritize bad workers, not lock them out of the job
+	pow = 8
 }
 

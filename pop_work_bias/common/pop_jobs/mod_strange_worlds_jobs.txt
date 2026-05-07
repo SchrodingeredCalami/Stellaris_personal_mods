@@ -25,8 +25,7 @@ sand_whisperer = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|sand_whisperer|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|sand_whisperer|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|sand_whisperer|
 	}
 
@@ -70,8 +69,7 @@ sand_caretaker = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|sand_caretaker|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|sand_caretaker|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|sand_caretaker|
 	}
 
@@ -116,8 +114,7 @@ drone_sand_whisperer = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|drone_sand_whisperer|POP_CAT|complex_drone|
+		weight =  value:mod_base_pop_job_weight_bonus|JOB|drone_sand_whisperer|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|drone_sand_whisperer|
 	}
 
@@ -162,8 +159,7 @@ drone_sand_caretaker = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|drone_sand_caretaker|POP_CAT|complex_drone|
+		weight =  value:mod_base_pop_job_weight_bonus|JOB|drone_sand_caretaker|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|drone_sand_caretaker|
 	}
 
@@ -207,8 +203,7 @@ space_junk_collector = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|space_junk_collector|POP_CAT|specialist|
+		weight =  value:mod_base_pop_job_weight_bonus|JOB|space_junk_collector|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|space_junk_collector|
 	}
 
@@ -252,8 +247,7 @@ drone_space_junk_collector = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|drone_space_junk_collector|POP_CAT|complex_drone|
+		weight =  value:mod_base_pop_job_weight_bonus|JOB|drone_space_junk_collector|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|drone_space_junk_collector|
 	}
 

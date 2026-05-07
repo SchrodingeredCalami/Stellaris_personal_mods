@@ -37,8 +37,7 @@ treasure_gatherer = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|treasure_gatherer|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|treasure_gatherer|POP_CAT|specialist|
 		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|energy|WEIGHT1|1.6|RESOURCE2|minerals|WEIGHT2|1.0|
 		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|unity|WEIGHT1|1|RESOURCE2|society_research|WEIGHT2|0.1|
 		mult = value:job_weights_modifier|JOB|treasure_gatherer|RESOURCE|trade|
@@ -211,8 +210,7 @@ wrangler = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|wrangler|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|wrangler|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|wrangler|RESOURCE|unity|FACTOR|0.25|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -227,11 +225,6 @@ wrangler = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
 			}
-		}
-
-		modifier = {
-			factor = 0.1
-			is_domestic_servant = yes
 		}
 
 		modifier = {
@@ -373,8 +366,7 @@ drone_wrangler = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|drone_wrangler|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|drone_wrangler|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|drone_wrangler|
 	}
 
@@ -431,8 +423,7 @@ treasure_gatherer_gestalt = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|treasure_gatherer_gestalt|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|treasure_gatherer_gestalt|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|treasure_gatherer_gestalt|
 	}
 

@@ -62,8 +62,7 @@ clerk = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|clerk|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|clerk|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|clerk|RESOURCE|trade|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -190,8 +189,7 @@ technician = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|technician|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|technician|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|technician|RESOURCE|energy|
 		modifier = {
 			factor = 100
@@ -201,16 +199,6 @@ technician = {
 			}
 			can_take_servant_job = no
 			can_fill_specialist_job_trigger = no
-		}
-		modifier = {
-			factor = 8
-			is_enslaved = yes
-			can_take_servant_job = no
-			OR = {
-				has_trait = trait_syncretic_proles
-				has_trait = trait_robot_superconductive
-				has_trait = trait_ingenious
-			}
 		}
 		modifier = {
 			factor = 2
@@ -417,8 +405,7 @@ miner = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|miner|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|miner|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|miner|RESOURCE|minerals|
 		modifier = {
 			factor = 10
@@ -655,8 +642,7 @@ farmer = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|farmer|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|farmer|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
 		modifier = {
 			factor = 1.1
@@ -807,8 +793,8 @@ mortal_initiate = {
 	}
 
 	weight = {
-		weight = 5
-		add = value:mod_base_pop_job_weight_bonus|JOB|mortal_initiate|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|mortal_initiate|POP_CAT|worker|
+		add = 1
 		mult = value:job_weights_multiple_resources_modifier|JOB|mortal_initiate|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|society_research|WEIGHT2|0.3|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -1006,8 +992,7 @@ squire = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|squire|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|squire|POP_CAT|worker|
 		factor = 1.2
 	}
 
@@ -1089,8 +1074,8 @@ foundry_prison_worker = {
 	}
 
 	weight = {
-		weight = 10 # Fairly important job
-		add = value:mod_base_pop_job_weight_bonus|JOB|foundry_prison_worker|POP_CAT|worker| 
+		weight = value:mod_base_pop_job_weight_bonus|JOB|foundry_prison_worker|POP_CAT|worker|
+		add = 1
 		mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
 		modifier = {
 			factor = 2
@@ -1181,8 +1166,8 @@ catalytic_technician_prison_worker = {
 	}
 
 	weight = {
-		weight = 10 # Fairly important job
-		add = value:mod_base_pop_job_weight_bonus|JOB|catalytic_technician_prison_worker|POP_CAT|worker| 
+		weight = value:mod_base_pop_job_weight_bonus|JOB|catalytic_technician_prison_worker|POP_CAT|worker| 
+		add = 1
 		mult = value:job_weights_modifier|JOB|catalytic_technician|RESOURCE|alloys|
 		modifier = {
 			factor = 2
@@ -1275,8 +1260,7 @@ artisan_prison_worker = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|artisan_prison_worker|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|artisan_prison_worker|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|artisan|RESOURCE|consumer_goods|
 		modifier = {
 			factor = 2
@@ -1385,8 +1369,7 @@ artificer_prison_worker = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|artificer_prison_worker|POP_CAT|worker|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|artificer_prison_worker|POP_CAT|worker|
 		mult = value:job_weights_multiple_resources_modifier|JOB|artificer|RESOURCE1|consumer_goods|WEIGHT1|0.8|RESOURCE2|engineering_research|WEIGHT2|0.2|
 		modifier = {
 			factor = 2

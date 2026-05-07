@@ -40,7 +40,7 @@ overlord_propagandist = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_propagandist|POP_CAT|specialist|
 	}
 
@@ -100,7 +100,7 @@ overlord_propagandist_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_propagandist_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -167,7 +167,7 @@ overlord_academic = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_academic|POP_CAT|specialist|
 	}
 
@@ -239,7 +239,7 @@ overlord_academic_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_academic_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -313,7 +313,7 @@ overlord_trader = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_trader|POP_CAT|specialist|
 	}
 
@@ -382,7 +382,7 @@ overlord_trader_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_trader_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -445,7 +445,7 @@ aid_worker = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|aid_worker|POP_CAT|worker|
 	}
 
@@ -505,7 +505,7 @@ aid_worker_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|aid_worker_drone|POP_CAT|simple_drone|
 	}
 
@@ -584,7 +584,7 @@ overlord_breeder = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_breeder|POP_CAT|specialist|
 	}
 
@@ -662,7 +662,7 @@ overlord_breeder_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_breeder_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -709,7 +709,7 @@ mind_thrall = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|mind_thrall|POP_CAT|worker|
 	}
 
@@ -758,7 +758,7 @@ mind_thrall_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|mind_thrall_drone|POP_CAT|simple_drone|
 	}
 
@@ -828,7 +828,7 @@ overlord_offspring_drone_feeder = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_offspring_drone_feeder|POP_CAT|specialist|
 	}
 
@@ -903,7 +903,7 @@ overlord_offspring_drone_feeder_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_offspring_drone_feeder_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -970,7 +970,7 @@ overlord_metallurgist = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_metallurgist|POP_CAT|specialist|
 	}
 	inline_script = "jobs/automodding_priority_alloys"
@@ -1029,7 +1029,7 @@ overlord_foundry_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_foundry_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -1089,7 +1089,7 @@ overlord_fabricator = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_fabricator|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -1150,7 +1150,7 @@ overlord_catalytic_technician = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_catalytic_technician|POP_CAT|specialist|
 	}
 	inline_script = "jobs/automodding_priority_alloys"
@@ -1226,7 +1226,7 @@ overlord_catalytic_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_catalytic_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -1311,7 +1311,7 @@ overlord_beholder = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_beholder|POP_CAT|specialist|
 	}
 
@@ -1395,7 +1395,7 @@ overlord_beholder_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_beholder_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -1472,7 +1472,7 @@ overlord_necromancer = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_necromancer|POP_CAT|specialist|
 	}
 
@@ -1551,7 +1551,7 @@ overlord_necromancer_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_necromancer_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -1620,7 +1620,7 @@ overlord_reassigner = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_reassigner|POP_CAT|specialist|
 	}
 
@@ -1686,7 +1686,7 @@ overlord_reassigner_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_reassigner_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -1742,7 +1742,7 @@ overlord_recruiter = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_recruiter|POP_CAT|specialist|
 	}
 
@@ -1798,7 +1798,7 @@ overlord_recruiter_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_recruiter_drone|POP_CAT|complex_drone|
 		mult = value:scripted_job_weight_shroud_forged_mult
 	}
@@ -1850,7 +1850,7 @@ overlord_ranger = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_ranger|POP_CAT|worker|
 	}
 
@@ -1910,7 +1910,7 @@ overlord_ranger_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_ranger_drone|POP_CAT|simple_drone|
 	}
 
@@ -1965,7 +1965,7 @@ overlord_arborist = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_arborist|POP_CAT|worker|
 	}
 
@@ -2022,7 +2022,7 @@ overlord_arborist_drone = {
 
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_arborist_drone|POP_CAT|simple_drone|
 	}
 
@@ -2085,7 +2085,7 @@ overlord_bio_trophy = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_bio_trophy|POP_CAT|worker|
 	}
 
@@ -2144,7 +2144,7 @@ overlord_bio_trophy_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_bio_trophy_drone|POP_CAT|simple_drone|
 	}
 
@@ -2202,7 +2202,7 @@ overlord_manager = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_manager|POP_CAT|specialist|
 	}
 
@@ -2271,7 +2271,7 @@ overlord_mortal_initiate = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_mortal_initiate|POP_CAT|worker|
 	}
 
@@ -2333,7 +2333,7 @@ overlord_mortal_initiate_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_mortal_initiate_drone|POP_CAT|simple_drone|
 	}
 
@@ -2601,7 +2601,7 @@ overlord_knight = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_knight|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|overlord_knight|RESOURCE|unity|
 		mult = value:job_weights_research_modifier|JOB|overlord_knight|
@@ -2686,7 +2686,7 @@ overlord_knight_drone = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_knight_drone|POP_CAT|complex_drone|
 		modifier = {
 			factor = 0
@@ -2795,7 +2795,7 @@ overlord_healthcare = {
 	}
 
 	weight = {
-		weight = 10
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_healthcare|POP_CAT|specialist|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -2986,7 +2986,7 @@ overlord_spawning_drone = {
 	}
 
 	weight = {
-		weight = 15
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_spawning_drone|POP_CAT|complex_drone|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -3085,7 +3085,7 @@ overlord_spawning_drone_lithoid = {
 	}
 
 	weight = {
-		weight = 15
+		weight = 1
 		add = value:mod_base_pop_job_weight_bonus|JOB|overlord_spawning_drone_lithoid|POP_CAT|complex_drone|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {

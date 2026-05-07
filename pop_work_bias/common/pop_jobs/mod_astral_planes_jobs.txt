@@ -311,17 +311,12 @@ astral_researcher = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|astral_researcher|POP_CAT|specialist|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|astral_researcher|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|astral_researcher|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
 		}
 		modifier = {
 			factor = 0.1
@@ -412,8 +407,7 @@ astral_drone = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|astral_drone|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|astral_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|astral_drone|
 	}
 
@@ -493,8 +487,7 @@ astral_unit = {
 	inline_script = "jobs/academia_recruiter_naval_cap_add"
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|astral_unit|POP_CAT|complex_drone|
+		weight = value:mod_base_pop_job_weight_bonus|JOB|astral_unit|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|astral_unit|
 		modifier = {
 			factor = 0.9
