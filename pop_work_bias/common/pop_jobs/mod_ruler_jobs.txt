@@ -402,7 +402,8 @@ politician = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|politician|POP_CAT|ruler|
+		weight = @ruler_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|politician|POP_CAT|ruler|
 		mult = value:job_weights_modifier|JOB|politician|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -507,7 +508,8 @@ knight_commander = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|knight_commander|POP_CAT|ruler|
+		weight = @high_prio_specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|knight_commander|POP_CAT|ruler|
 		mult = value:job_weights_modifier|JOB|knight_commander|RESOURCE|unity|
 		mult = value:job_weights_research_modifier|JOB|knight_commander|
 	}
@@ -563,7 +565,8 @@ dystopian_enforcer = {
 	inline_script = "jobs/job_enforcer"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|dystopian_enforcer|POP_CAT|ruler|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|dystopian_enforcer|POP_CAT|ruler|
 
 		modifier = {
 			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
@@ -664,7 +667,8 @@ dystopian_telepath = {
 	possible_precalc = can_fill_ruler_job
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|dystopian_telepath|POP_CAT|ruler|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|dystopian_telepath|POP_CAT|ruler|
 		mult = 2
 		mult = value:job_weights_modifier|JOB|telepath|RESOURCE|unity|
 		modifier = {

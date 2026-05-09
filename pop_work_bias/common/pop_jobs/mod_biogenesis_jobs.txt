@@ -29,7 +29,8 @@ disconnected_drone = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|disconnected_drone|POP_CAT|simple_drone|
+		weight = @special_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|disconnected_drone|POP_CAT|simple_drone|
 		modifier = {
 			add = -5 # Reduce the stickiness factor
 			exists = planet
@@ -119,7 +120,8 @@ skywatcher = {
 
 	weight = {
 		# Copied from soldier jobs
-		weight = value:mod_base_pop_job_weight_bonus|JOB|skywatcher|POP_CAT|specialist|
+		weight = @soldier_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|skywatcher|POP_CAT|specialist|
 		modifier = {
 			factor = 10
 			exists = planet
@@ -230,7 +232,8 @@ skywatcher_drone = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|skywatcher_drone|POP_CAT|complex_drone|
+		weight = @soldier_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|skywatcher_drone|POP_CAT|complex_drone|
 		# Copied from warrior drone jobs
 		modifier = {
 			factor = 10
@@ -345,7 +348,8 @@ transference_volunteer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|transference_volunteer|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|transference_volunteer|POP_CAT|specialist|
 		mult = 2
 		mult = value:job_weights_modifier|JOB|transference_volunteer|RESOURCE|unity|
 		modifier = {
@@ -435,7 +439,7 @@ transference_drone = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|transference_drone|POP_CAT|complex_drone|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|transference_drone|POP_CAT|complex_drone|
 		mult = 2
 		mult = value:job_weights_modifier|JOB|transference_drone|RESOURCE|unity|
 		modifier = {

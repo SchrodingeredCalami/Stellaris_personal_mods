@@ -311,7 +311,8 @@ astral_researcher = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|astral_researcher|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|astral_researcher|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|astral_researcher|
 		modifier = {
 			factor = 0.2
@@ -407,7 +408,8 @@ astral_drone = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|astral_drone|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|astral_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|astral_drone|
 	}
 
@@ -487,7 +489,8 @@ astral_unit = {
 	inline_script = "jobs/academia_recruiter_naval_cap_add"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|astral_unit|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|astral_unit|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|astral_unit|
 		modifier = {
 			factor = 0.9

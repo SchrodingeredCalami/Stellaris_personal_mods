@@ -1,5 +1,6 @@
     NGameplay = {
-        LOGISTIC_CEILING_MAX = 20
+        LOGISTIC_CEILING_MAX = 30
+        HABITABILITY_AUTO_MIGRATION		= 0.50
     }
     NAI = {
         AI_FREE_JOBS_DISTRICT_BUILD_CAP = 2200

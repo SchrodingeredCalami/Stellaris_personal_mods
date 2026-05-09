@@ -25,7 +25,8 @@ sand_whisperer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|sand_whisperer|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|sand_whisperer|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|sand_whisperer|
 	}
 
@@ -69,7 +70,8 @@ sand_caretaker = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|sand_caretaker|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|sand_caretaker|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|sand_caretaker|
 	}
 
@@ -114,7 +116,8 @@ drone_sand_whisperer = {
 	}
 
 	weight = {
-		weight =  value:mod_base_pop_job_weight_bonus|JOB|drone_sand_whisperer|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult =value:mod_base_pop_job_weight_bonus|JOB|drone_sand_whisperer|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|drone_sand_whisperer|
 	}
 
@@ -159,7 +162,8 @@ drone_sand_caretaker = {
 	}
 
 	weight = {
-		weight =  value:mod_base_pop_job_weight_bonus|JOB|drone_sand_caretaker|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|drone_sand_caretaker|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|drone_sand_caretaker|
 	}
 
@@ -203,7 +207,8 @@ space_junk_collector = {
 	}
 
 	weight = {
-		weight =  value:mod_base_pop_job_weight_bonus|JOB|space_junk_collector|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|space_junk_collector|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|space_junk_collector|
 	}
 
@@ -247,7 +252,8 @@ drone_space_junk_collector = {
 	}
 
 	weight = {
-		weight =  value:mod_base_pop_job_weight_bonus|JOB|drone_space_junk_collector|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|drone_space_junk_collector|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|drone_space_junk_collector|
 	}
 

@@ -82,7 +82,8 @@ ratling_scavenger = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|ratling_scavenger|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|ratling_scavenger|POP_CAT|worker|
 		mult = value:job_weights_multiple_resources_modifier|JOB|ratling_scavenger|RESOURCE1|food|WEIGHT1|0.5|RESOURCE2|minerals|WEIGHT2|0.5|
 	}
 
@@ -131,8 +132,8 @@ odd_factory_worker = {
 	}
 
 	weight = {
-		weight = 5
-		add = value:mod_base_pop_job_weight_bonus|JOB|odd_factory_worker|POP_CAT|worker|
+		weight = 999
+		mult = value:mod_base_pop_job_weight_bonus|JOB|odd_factory_worker|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|odd_factory_worker|RESOURCE|alloys|
 		modifier = {
 			factor = 0.2
@@ -198,8 +199,8 @@ odd_factory_drone = {
 	}
 
 	weight = {
-		weight = 2
-		add = value:mod_base_pop_job_weight_bonus|JOB|odd_factory_drone|POP_CAT|simple_drone|
+		weight = 999
+		mult = value:mod_base_pop_job_weight_bonus|JOB|odd_factory_drone|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|odd_factory_drone|RESOURCE|alloys|
 		modifier = {
 			factor = 0
@@ -424,7 +425,8 @@ dimensional_portal_researcher = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|dimensional_portal_researcher|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|dimensional_portal_researcher|POP_CAT|specialist|
 		modifier = {
 			mult = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|energy|WEIGHT2|0.4|
 			planet = { has_planet_flag = dportal_energy }
@@ -682,7 +684,8 @@ dimensional_portal_researcher_gestalt = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|dimensional_portal_researcher_gestalt|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|dimensional_portal_researcher_gestalt|POP_CAT|complex_drone|
 		modifier = {
 			mult = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher_gestalt|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|energy|WEIGHT2|0.4|
 			planet = { has_planet_flag = dportal_energy }
@@ -786,7 +789,8 @@ space_time_anomaly_researcher = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|space_time_anomaly_researcher|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|space_time_anomaly_researcher|POP_CAT|specialist|
 		mult = value:job_weights_multiple_resources_modifier|JOB|space_time_anomaly_researcher|RESOURCE1|physics_research|WEIGHT1|0.7|RESOURCE2|engineering_research|WEIGHT2|0.3|
 		modifier = {
 			factor = 0.2
@@ -869,7 +873,8 @@ space_time_anomaly_researcher_gestalt = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|space_time_anomaly_researcher_gestalt|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|space_time_anomaly_researcher_gestalt|POP_CAT|complex_drone|
 		mult = value:job_weights_multiple_resources_modifier|JOB|space_time_anomaly_researcher_gestalt|RESOURCE1|physics_research|WEIGHT1|0.7|RESOURCE2|engineering_research|WEIGHT2|0.3|
 		modifier = {
 			factor = 0.2
@@ -949,7 +954,8 @@ gas_plant_engineer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|gas_plant_engineer|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|gas_plant_engineer|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|gas_plant_engineer|RESOURCE|exotic_gases|
 	}
 
@@ -1011,7 +1017,8 @@ gas_plant_engineer_gestalt = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|gas_plant_engineer_gestalt|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|gas_plant_engineer_gestalt|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|gas_plant_engineer_gestalt|RESOURCE|exotic_gases|
 	}
 
@@ -1086,7 +1093,8 @@ cave_cleaner_gestalt = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|cave_cleaner_gestalt|POP_CAT|simple_drone|
+		weight = @simple_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|cave_cleaner_gestalt|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|cave_cleaner_gestalt|RESOURCE|minerals|
 	}
 
@@ -1153,7 +1161,8 @@ robot_caretaker = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|robot_caretaker|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|robot_caretaker|POP_CAT|specialist|
 		mult = value:job_weights_multiple_resources_modifier|JOB|robot_caretaker|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|engineering_research|WEIGHT2|0.5|
 		# Negative
 		modifier = {
@@ -1253,7 +1262,8 @@ turtle_miner_gestalt = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|turtle_miner_gestalt|POP_CAT|simple_drone|
+		weight = @simple_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|turtle_miner_gestalt|POP_CAT|simple_drone|
 		mult = value:job_weights_multiple_resources_modifier|JOB|turtle_miner_gestalt|RESOURCE1|minerals|WEIGHT1|0.5|RESOURCE2|food|WEIGHT2|0.5|
 		modifier = {
 			factor = 1.1
@@ -1334,7 +1344,7 @@ machine_nurse = {
 
 	weight = {
 		weight = @special_job_weight
-		add = value:mod_base_pop_job_weight_bonus|JOB|machine_nurse|POP_CAT|bio_trophy|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|machine_nurse|POP_CAT|bio_trophy|
 		modifier = {
 			factor = 200 # brings @special_job_weight up to 2
 			exists = planet
@@ -1546,7 +1556,7 @@ manufactorium_specialist = {
 
 	weight = {
 		weight = @special_job_weight
-		add = value:mod_base_pop_job_weight_bonus|JOB|manufactorium_specialist|POP_CAT|specialist|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|manufactorium_specialist|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|manufactorium_specialist|RESOURCE|alloys|
 	}
 	inline_script = "jobs/automodding_priority_alloys"
@@ -1704,7 +1714,8 @@ manufactorium_complex_drone = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|manufactorium_complex_drone|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|manufactorium_complex_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|manufactorium_complex_drone|RESOURCE|alloys|
 	}
 	inline_script = "jobs/automodding_priority_alloys"
@@ -1763,7 +1774,8 @@ manufactorium_scraper_drone = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|manufactorium_scraper_drone|POP_CAT|simple_drone|
+		weight = @simple_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|manufactorium_scraper_drone|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|manufactorium_scraper_drone|RESOURCE|minerals|
 	}
 
@@ -1844,7 +1856,8 @@ archivist = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|archivist|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|archivist|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|archivist|
 		modifier = {
 			factor = 0.2
@@ -1958,7 +1971,8 @@ puddle_technician = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|puddle_technician|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|puddle_technician|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
 		modifier = {
 			factor = 1.1
@@ -2124,7 +2138,8 @@ puddle_technician_drone = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|puddle_technician_drone|POP_CAT|simple_drone|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|puddle_technician_drone|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
 		modifier = {
 			factor = 1.1
@@ -2252,7 +2267,8 @@ stasis_warden = {
 	inline_script = "jobs/job_enforcer_additional_modifiers"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|stasis_warden|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|stasis_warden|POP_CAT|specialist|
 
 		modifier = {
 			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
@@ -2354,7 +2370,8 @@ stasis_warden_drone = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|stasis_warden_drone|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|stasis_warden_drone|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|patrol_drone|RESOURCE|unity|FACTOR|0.25|
 		modifier = {
 			factor = 50
@@ -2425,7 +2442,8 @@ astrogarbage_collector = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|astrogarbage_collector|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|astrogarbage_collector|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|astrogarbage_collector|RESOURCE|alloys|
 		modifier = {
 			factor = 10
@@ -2505,7 +2523,8 @@ astrogarbage_collector_gestalt = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|astrogarbage_collector_gestalt|POP_CAT|simple_drone|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|astrogarbage_collector_gestalt|POP_CAT|simple_drone|
 		mult = value:job_weights_modifier|JOB|astrogarbage_collector_gestalt|RESOURCE|alloys|
 		modifier = {
 			factor = 1.1
@@ -2565,7 +2584,8 @@ myrmeku_power_farmer = {
 		}
 	}
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|myrmeku_power_farmer|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|myrmeku_power_farmer|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|myrmeku_power_farmer|RESOURCE|energy|
 	}
 
@@ -2616,7 +2636,8 @@ myrmeku_power_farmer_gestalt = {
 		}
 	}
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|myrmeku_power_farmer_gestalt|POP_CAT|complex_drone|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|myrmeku_power_farmer_gestalt|POP_CAT|complex_drone|
 		mult = value:job_weights_modifier|JOB|myrmeku_power_farmer_gestalt|RESOURCE|energy|
 	}
 
@@ -2687,7 +2708,8 @@ stratovent_researcher = {
 	inline_script = "jobs/inf_navalcap_jobs"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|stratovent_researcher|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|stratovent_researcher|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|stratovent_researcher|RESOURCE|society_research|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		mult = value:job_weights_modifier|JOB|stratovent_researcher|RESOURCE|trade|
@@ -2737,7 +2759,8 @@ stratovent_refiner = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|stratovent_refiner|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|stratovent_refiner|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|stratovent_refiner|RESOURCE|exotic_gases|
 	}
 
@@ -2782,7 +2805,8 @@ stratovent_refiner_upg = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|stratovent_refiner_upg|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|stratovent_refiner_upg|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|stratovent_refiner_upg|RESOURCE|exotic_gases|
 	}
 
@@ -2829,7 +2853,8 @@ stratovent_refiner_minerals = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|stratovent_refiner_minerals|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|stratovent_refiner_minerals|POP_CAT|specialist|
 		mult = value:job_weights_multiple_resources_modifier|JOB|stratovent_refiner_minerals|RESOURCE1|exotic_gases|WEIGHT1|0.7|RESOURCE2|minerals|WEIGHT2|0.3|
 	}
 	inline_script = "jobs/automodding_priority_minerals"
@@ -2895,7 +2920,8 @@ mineral_diver_drone = {
 		}
 	}
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|mineral_diver_drone|POP_CAT|simple_drone|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|mineral_diver_drone|POP_CAT|simple_drone|
 		mult = value:job_weights_multiple_resources_modifier|JOB|mineral_diver_drone|RESOURCE1|minerals|WEIGHT1|0.5|RESOURCE2|alloys|WEIGHT2|0.5|
 	}
 
@@ -2948,7 +2974,8 @@ alien_hunter = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|alien_hunter|POP_CAT|worker|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|alien_hunter|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|alien_hunter|RESOURCE|food|
 		modifier = {
 			factor = 10

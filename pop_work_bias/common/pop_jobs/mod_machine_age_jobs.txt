@@ -102,7 +102,8 @@ haruspex = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|haruspex|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|haruspex|POP_CAT|specialist|
 		mult = value:job_weights_multiple_resources_modifier|JOB|haruspex|RESOURCE1|unity|WEIGHT1|0.50|RESOURCE2|engineering_research|WEIGHT2|0.50|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -192,7 +193,8 @@ technophant = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|technophant|POP_CAT|ruler|
+		weight = @ruler_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|technophant|POP_CAT|ruler|
 
 		mult = value:job_weights_multiple_resources_modifier|JOB|technophant|RESOURCE1|unity|WEIGHT1|0.80|RESOURCE2|engineering_research|WEIGHT2|0.20|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
@@ -507,8 +509,8 @@ augmentor = { # Normal empire
 	}
 
 	weight = {
-		weight = 2
-		add = value:mod_base_pop_job_weight_bonus|JOB|augmentor|POP_CAT|specialist|
+		weight = 500
+		mult = value:mod_base_pop_job_weight_bonus|JOB|augmentor|POP_CAT|specialist|
 	}
 
 	inline_script = "jobs/automodding_priority_research"
@@ -619,8 +621,8 @@ augmentor_drone = { # Gestalt empire
 	}
 
 	weight = {
-		weight = 2
-		add = value:mod_base_pop_job_weight_bonus|JOB|augmentor_drone|POP_CAT|complex_drone|
+		weight = @spawner_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|augmentor_drone|POP_CAT|complex_drone|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 0.5 # job is less useful if pop control is active, but still gives amenities
@@ -837,8 +839,8 @@ identity_designer = {
 	}
 
 	weight = {
-		weight = 2
-		add = value:mod_base_pop_job_weight_bonus|JOB|identity_designer|POP_CAT|specialist|
+		weight = 500
+		mult = value:mod_base_pop_job_weight_bonus|JOB|identity_designer|POP_CAT|specialist|
 	}
 
 	inline_script = "jobs/automodding_priority_research"
@@ -893,8 +895,8 @@ cyberdome_duelist = {
 	}
 
 	weight = {
-		weight = 2
-		add = value:mod_base_pop_job_weight_bonus|JOB|cyberdome_duelist|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|cyberdome_duelist|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|duelist|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
@@ -942,7 +944,8 @@ cyberdome_spectator = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|cyberdome_spectator|POP_CAT|worker|
+		weight = 0.1
+		mult = value:mod_base_pop_job_weight_bonus|JOB|cyberdome_spectator|POP_CAT|worker|
 	}
 
 	inline_script = "jobs/automodding_priority_trade"
@@ -1070,7 +1073,8 @@ nanotech_research_unit = {
 	inline_script = "jobs/academia_recruiter_naval_cap_add"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|nanotech_research_unit|POP_CAT|complex_drone|
+		weight = @complex_drone_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|nanotech_research_unit|POP_CAT|complex_drone|
 		mult = value:job_weights_research_modifier|JOB|nanotech_research_unit|
 		modifier = {
 			factor = 0.9
@@ -1155,7 +1159,8 @@ nanotech_researcher = {
 	inline_script = "jobs/academia_recruiter_naval_cap_add"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|nanotech_researcher|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|nanotech_researcher|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|nanotech_researcher|
 		modifier = {
 			factor = 0.2

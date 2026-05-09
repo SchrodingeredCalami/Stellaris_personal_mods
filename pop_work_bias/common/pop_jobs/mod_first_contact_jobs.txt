@@ -35,7 +35,8 @@ low_tech_laborer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_laborer|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_laborer|POP_CAT|worker|
 		mult = value:job_weights_multiple_resources_modifier|JOB|low_tech_laborer|RESOURCE1|consumer_goods|WEIGHT1|0.5|RESOURCE2|alloys|WEIGHT2|0.5|
 	}
 	inline_script = "jobs/automodding_priority_consumer_goods"
@@ -83,7 +84,8 @@ low_tech_miner = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_miner|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_miner|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|low_tech_miner|RESOURCE|minerals|
 	}
 	inline_script = "jobs/automodding_priority_minerals"
@@ -131,7 +133,8 @@ low_tech_technician = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_technician|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_technician|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|low_tech_technician|RESOURCE|energy|
 	}
 	inline_script = "jobs/automodding_priority_energy"
@@ -178,7 +181,8 @@ low_tech_farmer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_farmer|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_farmer|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|low_tech_farmer|RESOURCE|food|
 	}
 	inline_script = "jobs/automodding_priority_food"
@@ -232,7 +236,8 @@ low_tech_researcher = {
 	inline_script = "jobs/academia_recruiter_naval_cap_add"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_researcher|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_researcher|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|low_tech_researcher|
 	}
 	inline_script = "jobs/automodding_priority_research"
@@ -307,7 +312,8 @@ low_tech_priest = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_priest|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_priest|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|low_tech_priest|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
@@ -370,7 +376,8 @@ low_tech_bureaucrat = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_bureaucrat|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_bureaucrat|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|low_tech_bureaucrat|RESOURCE|unity|
 	}
 	inline_script = "jobs/automodding_priority_unity"
@@ -434,7 +441,8 @@ low_tech_manager = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|low_tech_manager|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_manager|POP_CAT|specialist|
 		mult = value:job_weights_multiple_resources_modifier|JOB|low_tech_bureaucrat|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|trade|WEIGHT2|0.5|
 	}
 	inline_script = "jobs/automodding_priority_trade"
@@ -479,8 +487,8 @@ low_tech_warrior = {
 	}
 
 	weight = {
-		weight = 1
-		add = value:mod_base_pop_job_weight_bonus|JOB|low_tech_warrior|POP_CAT|specialist|
+		weight = @soldier_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|low_tech_warrior|POP_CAT|specialist|
 	}
 
 	promotion = {
@@ -540,7 +548,8 @@ broken_shackles_scavenger = {
 	inline_script = "jobs/academia_recruiter_naval_cap_add"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|broken_shackles_scavenger|POP_CAT|worker|
+		weight = @worker_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|broken_shackles_scavenger|POP_CAT|worker|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		mult = value:job_weights_research_modifier|JOB|broken_shackles_scavenger|
 		mult = value:job_weights_modifier|JOB|broken_shackles_scavenger|RESOURCE|alloys|

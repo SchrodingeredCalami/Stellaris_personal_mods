@@ -212,7 +212,8 @@ physicist = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|physicist|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|physicist|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|physicist|RESOURCE|physics_research|
 		modifier = {
 			factor = 0.2
@@ -392,7 +393,8 @@ biologist = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|biologist|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|biologist|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|biologist|RESOURCE|society_research|
 		modifier = {
 			factor = 0.2
@@ -521,7 +523,8 @@ engineer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|engineer|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|engineer|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|engineer|RESOURCE|engineering_research|
 		modifier = {
 			factor = 0.2
@@ -1267,7 +1270,8 @@ bureaucrat = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|bureaucrat|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|bureaucrat|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|bureaucrat|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -1341,7 +1345,8 @@ enforcer = {
 	inline_script = "jobs/job_enforcer"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|enforcer|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|enforcer|POP_CAT|specialist|
 
 		modifier = {
 			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
@@ -1456,7 +1461,8 @@ telepath = {
 	possible_precalc = can_fill_specialist_job
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|telepath|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|telepath|POP_CAT|specialist|
 		mult = 2
 		mult = value:job_weights_modifier|JOB|telepath|RESOURCE|unity|
 		modifier = {
@@ -1662,7 +1668,8 @@ entertainer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|entertainer|POP_CAT|specialist|
+		weight = @high_prio_specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|entertainer|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|entertainer|RESOURCE|unity|FACTOR|0.25|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -1677,10 +1684,6 @@ entertainer = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
 			}
-		}
-		modifier = {
-			factor = 0.1
-			is_domestic_servant = yes
 		}
 
 		modifier = {
@@ -1799,7 +1802,8 @@ chemist = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|chemist|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|chemist|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|chemist|RESOURCE|volatile_motes|
 		modifier = {
 			factor = 0.2
@@ -1884,7 +1888,8 @@ translucer = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|translucer|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|translucer|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|translucer|RESOURCE|rare_crystals|
 		modifier = {
 			factor = 0.2
@@ -1975,7 +1980,8 @@ gas_refiner = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|gas_refiner|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|gas_refiner|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|gas_refiner|RESOURCE|exotic_gases|
 		modifier = {
 			factor = 0.2
@@ -2192,8 +2198,8 @@ roboticist = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|roboticist|POP_CAT|specialist|
-		add = 2
+		weight = 500
+		mult = value:mod_base_pop_job_weight_bonus|JOB|roboticist|POP_CAT|specialist|
 		modifier = {
 			factor = 10
 			owner = { is_synthetic_empire = yes }
@@ -2289,7 +2295,8 @@ healthcare = {
 	inline_script = "output/genomic_triggered_modifiers"
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|healthcare|POP_CAT|specialist|
+		weight = @high_prio_specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|healthcare|POP_CAT|specialist|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 0.2
@@ -2461,7 +2468,8 @@ trader = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|trader|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|trader|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|trader|RESOURCE|trade|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		# crisis purge
@@ -2687,8 +2695,8 @@ necro_apprentice = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|necro_apprentice|POP_CAT|specialist|
-		add = 10
+		weight = @ruler_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|necro_apprentice|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|necro_apprentice|RESOURCE|unity|FACTOR|0.5|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
@@ -2789,8 +2797,8 @@ foundry = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|foundry|POP_CAT|specialist|
-		add = 1 # Fairly important job
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|foundry|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
 		modifier = {
 			factor = 2
@@ -3037,7 +3045,8 @@ artisan = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|artisan|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|artisan|POP_CAT|specialist|
 		mult = value:job_weights_modifier|JOB|artisan|RESOURCE|consumer_goods|
 		modifier = {
 			factor = 2
@@ -3150,8 +3159,8 @@ reassigner = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|reassigner|POP_CAT|specialist|
-		add = 1
+		weight = 500
+		mult = value:mod_base_pop_job_weight_bonus|JOB|reassigner|POP_CAT|specialist|
 	}
 
 	promotion = {
@@ -3254,7 +3263,8 @@ bath_attendant = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|bath_attendant|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|bath_attendant|POP_CAT|specialist|
 	}
 }
 
@@ -3353,7 +3363,8 @@ knight = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|knight|POP_CAT|specialist|
+		weight = @high_prio_specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|knight|POP_CAT|specialist|
 		factor = 1.2
 		add = 5 #Somehow pops preferred to work as squires than as knights. No more.
 	}
@@ -3461,7 +3472,8 @@ resort_worker = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|resort_worker|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|resort_worker|POP_CAT|specialist|
 		mult = value:job_weights_multiple_resources_modifier|JOB|resort_worker|RESOURCE1|unity|WEIGHT1|0.33|RESOURCE2|trade|WEIGHT2|0.67|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		# crisis purge
@@ -3546,7 +3558,8 @@ polytechnic_mentor = {
 	auto_generate_description = no
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|polytechnic_mentor|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|polytechnic_mentor|POP_CAT|specialist|
 		mult = value:job_weights_research_modifier|JOB|polytechnic_mentor|
 		modifier = {
 			factor = 0.2
@@ -3612,7 +3625,8 @@ offworld_prospector = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|offworld_prospector|POP_CAT|specialist|
+		weight = @specialist_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|offworld_prospector|POP_CAT|specialist|
 	}
 }
 
@@ -3676,8 +3690,8 @@ soldier = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|soldier|POP_CAT|specialist|
-		add = 1
+		weight = @soldier_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|soldier|POP_CAT|specialist|
 		modifier = {
 			factor = 10
 			exists = planet
@@ -3785,8 +3799,8 @@ battle_thrall = {
 	}
 
 	weight = {
-		weight = value:mod_base_pop_job_weight_bonus|JOB|battle_thrall|POP_CAT|specialist|
-		add = 1
+		weight = @soldier_job_weight
+		mult = value:mod_base_pop_job_weight_bonus|JOB|battle_thrall|POP_CAT|specialist|
 		modifier = {
 			factor = 10
 			exists = planet
