@@ -4,13 +4,6 @@ complex_drone = {
 
 	weight = {
 		weight = 2
-		modifier = {
-			OR = {
-				is_sapient = no
-				has_trait = trait_syncretic_proles
-			}
-			add = -5
-		}
 	}
 
 	automation_resources = {

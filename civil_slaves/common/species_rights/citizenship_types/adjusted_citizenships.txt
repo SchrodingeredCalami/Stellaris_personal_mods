@@ -82,7 +82,7 @@ citizenship_limited = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = MUST_NOT_BE_DOMINANT_SPECIES
+			fail_text = "last_citizen"
 			from = {
 				count_exact_species = {
 					limit = {
@@ -228,7 +228,7 @@ citizenship_slavery = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = MUST_NOT_BE_DOMINANT_SPECIES
+			fail_text = "last_citizen"
 			from = {
 				count_exact_species = {
 					limit = {
@@ -239,6 +239,14 @@ citizenship_slavery = {
 					count >= 1
 				}
 			}
+		}
+		custom_tooltip = {
+			fail_text = "xeno_slaver"
+			NAND = {
+				is_same_species = from
+				is_xenophobe = yes
+				is_authoritarian = no
+				}
 		}
 		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"

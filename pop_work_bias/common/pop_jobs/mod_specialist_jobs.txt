@@ -2135,6 +2135,7 @@ roboticist = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_active_tradition = tr_cybernetics_metabolic_reprocessing
 			}

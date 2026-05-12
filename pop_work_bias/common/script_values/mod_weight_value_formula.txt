@@ -1,13 +1,30 @@
 # change the formula to use pow instead of mult.
 # exponentiation heighten differences better, despite bigger values.
 
-# add = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|$STRATA$|
+# mult = value:mod_base_pop_job_weight_bonus|JOB|$JOB$|POP_CAT|$STRATA$|
 
 mod_base_pop_job_weight_bonus = {
 	base = 1
 	add = modifier:pop_$JOB$_bonus_workforce_mult
 	add = modifier:pop_cat_$POP_CAT$_bonus_workforce_mult
-	
+
+	# Experimental extra weight for non sapient robots: A tie breaker pseudo copied from worker jobs.
+	modifier = {
+		factor = 3
+		has_citizenship_type = { country = from type = citizenship_robot_servitude}
+	}
+	modifier = {
+		factor = 10
+		has_citizenship_type = { country = from type = citizenship_robot_servitude}
+		owner = { NOT = { has_technology = tech_droid_workers } }
+	}
+	modifier = {
+		factor = 0.25
+		can_take_servant_job = yes
+	}
+
+	# The core component
 	pow = 8
 }
 
+# Bug found: robots are having less weight than they should.

@@ -1269,10 +1269,7 @@ turtle_miner_gestalt = {
 			factor = 1.1
 			owner = { has_valid_civic = civic_agrarian_idyll }
 		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		
 		modifier = {
 			factor = 0.5
 			has_trait = trait_lithoid
@@ -2006,10 +2003,7 @@ puddle_technician = {
 				NOT = { has_technology = tech_droid_workers }
 			}
 		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		
 		modifier = {
 			factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -2173,10 +2167,7 @@ puddle_technician_drone = {
 				NOT = { has_technology = tech_droid_workers }
 			}
 		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		
 		modifier = {
 			factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -2451,28 +2442,7 @@ astrogarbage_collector = {
 			can_take_servant_job = no
 			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
-		modifier = {
-			factor = 3
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { has_technology = tech_droid_workers }
-		}
-		modifier = {
-			factor = 200
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { NOT = { has_technology = tech_droid_workers } }
-		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
@@ -2983,28 +2953,7 @@ alien_hunter = {
 			can_take_servant_job = no
 			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
-		modifier = {
-			factor = 3
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { has_technology = tech_droid_workers }
-		}
-		modifier = {
-			factor = 200
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { NOT = { has_technology = tech_droid_workers } }
-		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		
 	}
 
 	inline_script = "jobs/automodding_priority_food"

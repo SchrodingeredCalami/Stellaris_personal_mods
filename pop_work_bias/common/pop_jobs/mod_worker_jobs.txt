@@ -90,29 +90,9 @@ technician = {
 
 	weight = {
 		weight = @worker_job_weight
-		mult = value:mod_base_pop_job_weight_bonus|JOB|technician|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|technician|RESOURCE|energy|
-		modifier = {
-			factor = 100
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			can_fill_specialist_job_trigger = no
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		mult = value:mod_base_pop_job_weight_bonus|JOB|technician|POP_CAT|worker|
+		
 		# low income modifier
 		modifier = {
 			factor = 3
@@ -307,36 +287,16 @@ miner = {
 
 	weight = {
 		weight = @worker_job_weight
-		mult = value:mod_base_pop_job_weight_bonus|JOB|miner|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|miner|RESOURCE|minerals|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|miner|POP_CAT|worker|
+
 		modifier = {
 			factor = 10
 			is_enslaved = yes
 			can_take_servant_job = no
 			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
-		modifier = {
-			factor = 3
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { has_technology = tech_droid_workers }
-		}
-		modifier = {
-			factor = 200
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { NOT = { has_technology = tech_droid_workers } }
-		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		
 
 		# low income modifier
 		modifier = {
@@ -545,8 +505,9 @@ farmer = {
 
 	weight = {
 		weight = @worker_job_weight
-		mult = value:mod_base_pop_job_weight_bonus|JOB|farmer|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|farmer|POP_CAT|worker|
+
 		modifier = {
 			factor = 1.1
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -557,28 +518,7 @@ farmer = {
 			can_take_servant_job = no
 			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
-		modifier = {
-			factor = 3
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { has_technology = tech_droid_workers }
-		}
-		modifier = {
-			factor = 200
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { NOT = { has_technology = tech_droid_workers } }
-		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
-		}
+		
 		modifier = {
 			factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -979,8 +919,9 @@ foundry_prison_worker = {
 
 	weight = {
 		weight = @specialist_job_weight # Fairly important job
-		mult = value:mod_base_pop_job_weight_bonus|JOB|foundry_prison_worker|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|foundry_prison_worker|POP_CAT|worker|
+		
 		modifier = {
 			factor = 2
 			is_enslaved = yes
@@ -1071,8 +1012,9 @@ catalytic_technician_prison_worker = {
 
 	weight = {
 		weight = @specialist_job_weight # Fairly important job
-		mult = value:mod_base_pop_job_weight_bonus|JOB|catalytic_technician_prison_worker|POP_CAT|worker| 
 		mult = value:job_weights_modifier|JOB|catalytic_technician|RESOURCE|alloys|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|catalytic_technician_prison_worker|POP_CAT|worker| 
+		
 		modifier = {
 			factor = 2
 			is_enslaved = yes
@@ -1165,8 +1107,9 @@ artisan_prison_worker = {
 
 	weight = {
 		weight = @specialist_job_weight # Fairly important job
-		mult = value:mod_base_pop_job_weight_bonus|JOB|artisan_prison_worker|POP_CAT|worker|
 		mult = value:job_weights_modifier|JOB|artisan|RESOURCE|consumer_goods|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|artisan_prison_worker|POP_CAT|worker|
+		
 		modifier = {
 			factor = 2
 			is_enslaved = yes

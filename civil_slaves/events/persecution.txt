@@ -1,0 +1,9 @@
+# Discount persecution, with residence citizenship
+country_event = {
+    
+}
+
+# Authoritarian persecution
+country_event = {
+
+}

@@ -1,16 +1,9 @@
 ruler = {
 	rank = 4
-	change_job_threshold = 1.01
+	change_job_threshold = 1
 
 	weight = {
 		weight = 3
-		modifier = {
-			OR = {
-				is_sapient = no
-				has_trait = trait_syncretic_proles
-			}
-			add = -5
-		}
 	}
 
 	automation_resources = {
@@ -70,17 +63,10 @@ ruler = {
 
 specialist = {
 	rank = 3
-	change_job_threshold = 1.01
+	change_job_threshold = 1
 
 	weight = {
 		weight = 2
-		modifier = {
-			OR = {
-				is_sapient = no
-				has_trait = trait_syncretic_proles
-			}
-			add = -5
-		}
 	}
 
 	automation_resources = {
@@ -141,7 +127,7 @@ specialist = {
 worker = {
 	rank = 2
 
-	change_job_threshold = 1.01
+	change_job_threshold = 1
 
 	triggered_planet_modifier = {
 		potential = {
