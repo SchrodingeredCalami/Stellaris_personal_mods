@@ -100,7 +100,7 @@ slavery = {
 				fail_text = is_broken_shackles_origin
 				NOT = { has_origin = origin_broken_shackles }
 			}
-			OR = {
+			AND = {
 				is_authoritarian = no
 				is_xenophobe = yes
 			}
