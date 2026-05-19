@@ -1,8 +1,10 @@
+# The persecution flag will define slavery or residence of citizens
+# depending of slavery policy allowing main species slavery.
+
 persecution = {
     potential = {
         NOR = {
             has_ethic = "ethic_gestalt_consciousness"
-            is_authoritarian = yes
         }
     }
 
@@ -27,6 +29,7 @@ persecution = {
         }
     }
 
+	# Authoritarians enslave their own citizens when they want to.
     option = {
         name = "persecution_allowed"
         valid = {
@@ -45,6 +48,12 @@ persecution = {
 
         AI_weight = {
             factor = 5
+			# Authoritarians enslave their citizens most of the time.
+			# Harmonious collectives are when weight fails
+			modifier = {
+				factor = 4
+				is_authoritarian = yes
+			}
         }
     }
 }
@@ -152,7 +161,7 @@ slavery = {
 			}
 
 			# special case for harmonious collectives.
-			# harmonious collectives never enslave their citizens. 
+			# harmonious collectives never enslave.
 
 			# if we mod the AI, should change to factor 0.5 due to ethics,
 			# so the policy determine the personality between

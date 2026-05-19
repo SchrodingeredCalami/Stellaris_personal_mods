@@ -1,9 +1,7 @@
-# Discount persecution, with residence citizenship
+# Remember:
+# Persecution policy will make citizens lose status depending on slavery policy.
+# If allows authoritarian slavery, everyone can be a slave, else they are residents.
+
 country_event = {
     
-}
-
-# Authoritarian persecution
-country_event = {
-
 }
