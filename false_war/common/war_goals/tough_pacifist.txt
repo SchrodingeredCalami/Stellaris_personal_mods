@@ -1,0 +1,100 @@
+# An altered humiliation casus belli that regular humiliation happens on status quo victory
+
+wg_resilience = {
+    casus_belli = cb_humiliation
+	hide_if_no_cb = no
+	defender_default = yes
+
+    galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+
+	surrender_acceptance = -50
+
+	potential = {
+        has_policy_flag = no_wars
+		has_total_war_cb = no
+		from = { is_country_type = default }
+	}
+    
+	possible = {
+        always = yes
+	}
+
+    war_exhaustion = 0.5
+
+    surrender_acceptance = -50
+
+    on_status_quo = {
+        custom_tooltip = wg_humiliation_accept
+        hidden_effect = {
+            add_resource = { influence = 100 }
+            from = {
+                add_modifier = { modifier = humiliated days = 3600 }
+                if = {
+                    limit = { has_policy_flag = diplo_stance_supremacist }
+                    set_policy = {
+                        policy = diplomatic_stance
+                        option = diplo_stance_belligerent
+                        cooldown = yes
+                    }
+                    prev = {
+                        set_country_flag = humble_pie_achievement
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    root = { has_tradition = tr_enmity_eclipse }
+                }
+                root = {
+                    remove_modifier = reaffirmed_superiority
+                    add_modifier = {
+                        modifier = reaffirmed_superiority
+                        days = 3600
+                        multiplier = value:reaffirmed_superiority_value
+                    }
+                }
+            }
+        }
+    }
+	
+    on_accept = {
+        custom_tooltip = wg_humiliation_accept
+        hidden_effect = {
+            add_resource = { influence = 150 }
+            from = {
+                add_modifier = { modifier = humiliated days = 3600 }
+                if = {
+                    limit = { has_policy_flag = diplo_stance_supremacist }
+                    set_policy = {
+                        policy = diplomatic_stance
+                        option = diplo_stance_belligerent
+                        cooldown = yes
+                    }
+                    prev = {
+                        set_country_flag = humble_pie_achievement
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    root = { has_tradition = tr_enmity_eclipse }
+                }
+                root = {
+                    remove_modifier = reaffirmed_superiority
+                    add_modifier = {
+                        modifier = reaffirmed_superiority
+                        days = 3600
+                        multiplier = value:reaffirmed_superiority_value
+                    }
+                }
+            }
+        }
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
