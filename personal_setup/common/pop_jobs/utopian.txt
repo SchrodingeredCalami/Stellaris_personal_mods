@@ -70,12 +70,10 @@ civilian = {
 		inline_script = "jobs/ethic_job_resources"
 	}
 
-	# Hedonists
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				is_pleasure_seeker_empire = no
 				NOT = {
 					has_valid_civic = civic_dystopian_society
 				}
@@ -197,6 +195,19 @@ civilian_good = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_pleasure_seeker_empire = yes
+			}
+			has_living_standard = {
+				type = living_standard_decadent
+			}
+		}
+		bonus_pop_growth_mult = 0.005 # Purging founder_species_growth_mult
+	}
+
 	triggered_country_modifier = {
 		potential = {
 			exists = owner
@@ -258,20 +269,6 @@ utopian = {
 			building_icon = building_amusement_megaplex
 			weight = 6
 		}
-		# Hedonists
-		swap_type = {
-			trigger = {
-				exists = owner
-				owner = {
-					is_pleasure_seeker_empire = yes
-				}
-			}
-			name = fe_hedonist
-			desc = fe_hedonist
-			icon = fe_hedonist
-			building_icon = building_holo_theatres
-			weight = 5
-		}
 	}
 
 	resources = {
@@ -291,21 +288,6 @@ utopian = {
 			trade = 1
 		}
 		inline_script = "jobs/ethic_job_resources"
-	}
-
-	# Hedonists
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_pleasure_seeker_empire = no
-				NOT = {
-					has_valid_civic = civic_dystopian_society
-				}
-			}
-		}
-		planet_amenities_add = 50
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	triggered_country_modifier = {

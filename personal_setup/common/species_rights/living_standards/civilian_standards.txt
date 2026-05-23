@@ -1,4 +1,4 @@
-# Removed from living standards to job
+# Removed resource production from living standards to job
 
 living_standard_shared_burden = {
 	potential = {
@@ -187,26 +187,43 @@ living_standard_utopian = {
 		modifier = {
 			factor = 0
 			NOT = { has_living_standard = { country = from type = living_standard_utopian } }
-			NOT = {
-				from = {
-					has_monthly_income = {
-						resource = minerals
-						value > 300
-					}
+
+			from = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value > 20
 				}
 			}
 		}
 		modifier = {
 			factor = 0
 			has_living_standard = { country = from type = living_standard_utopian }
-			NOT = {
-				from = {
-					has_monthly_income = {
-						resource = minerals
-						value > 200
+
+			from = {
+				OR = {
+					AND = {
+						resource_stockpile_compare = {
+							resource = consumer_goods
+							value < 2000
+						}
+						has_monthly_income = {
+							resource = consumer_goods
+							value < 10
+						}
+					}
+					AND = {
+						resource_stockpile_compare = {
+							resource = consumer_goods
+							value < 1000
+						}
+						has_monthly_income = {
+							resource = consumer_goods
+							value < -20
+						}
 					}
 				}
 			}
+
 		}
 	}
 }
@@ -341,32 +358,33 @@ living_standard_good = {
 				NOR = {
 					is_pacifist = yes
 					is_egalitarian = yes
+					is_pleasure_seeker_empire = yes
 				}
 			}
 		}
 		modifier = {
 			factor = 0
 			NOT = { has_living_standard = { country = from type = living_standard_good } }
-			NOT = {
-				from = {
-					has_monthly_income = {
-						resource = minerals
-						value > 150
-					}
+
+			from = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
 				}
 			}
+			
 		}
 		modifier = {
 			factor = 0
 			has_living_standard = { country = from type = living_standard_good }
-			NOT = {
-				from = {
-					has_monthly_income = {
-						resource = minerals
-						value > 100
-					}
+
+			from = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
 				}
 			}
+			
 		}
 		modifier = {
 			factor = 0.25
@@ -380,7 +398,7 @@ living_standard_good = {
 	}
 }
 
-# Decadents also generate unity
+# Decadents also generate unity, and they didn't have egalitarian limits, leading to economic suicide
 
 living_standard_decadent = {
 	potential = {
@@ -484,6 +502,52 @@ living_standard_decadent = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		factor = 15
+		modifier = {
+			factor = 0
+			NOT = { has_citizenship_type = { country = from type = citizenship_full } }
+		}
+		modifier = {
+			factor = 0
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_living_standard = { country = from type = living_standard_decadent } }
+			from = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 20
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_living_standard = { country = from type = living_standard_decadent }
+			from = {
+				OR = {
+					AND = {
+						resource_stockpile_compare = {
+							resource = consumer_goods
+							value < 2000
+						}
+						has_monthly_income = {
+							resource = consumer_goods
+							value < 10
+						}
+					}
+					AND = {
+						resource_stockpile_compare = {
+							resource = consumer_goods
+							value < 1000
+						}
+						has_monthly_income = {
+							resource = consumer_goods
+							value < -20
+						}
+					}
+				}
+			}
+		}
 	}
 }

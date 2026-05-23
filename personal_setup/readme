@@ -1,0 +1,10 @@
+This mod contain the following changes:
+- Logistic growth ceiling increased
+- Habitability for auto migration increased
+- Assimilation don't promote authoritarianism
+- Ethics job modifiers of egalitarian and xenophile switched (localisation not updated accordingly)
+- Galactic doorstep last event now triggered correctly
+- Civilians from high living standards now generate resources as jobs, not strata
+- Slavery allowed on subspecies of main species
+- AI will prefer living standards utopian > decadent > good
+- AI will check consumer goods overflow to change to higher living standards (pendent)
