@@ -205,7 +205,7 @@ civilian_good = {
 				type = living_standard_decadent
 			}
 		}
-		bonus_pop_growth_mult = 0.005 # Purging founder_species_growth_mult
+		founder_species_growth_mult = 0.005 # Kept the variable. It's mostly harmless, it seems.
 	}
 
 	triggered_country_modifier = {
