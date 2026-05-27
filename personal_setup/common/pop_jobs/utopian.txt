@@ -1,4 +1,4 @@
-# Added utopia civilians and good civilians
+# Added utopia civilians and good civilians (and hedonists)
 
 civilian = {
 	category = civilian
@@ -127,7 +127,6 @@ civilian_good = {
 		OR = {
 			has_living_standard = { type = living_standard_good }
 			has_living_standard = { type = living_standard_shared_burden }
-			has_living_standard = { type = living_standard_decadent }
 		}
 		planet = { NOT = { is_planet_class = pc_cosmogenesis_world }  }
 	}
@@ -148,20 +147,6 @@ civilian_good = {
 			building_icon = building_amusement_megaplex
 			weight = 6
 		}
-		# Hedonists
-		swap_type = {
-			trigger = {
-				exists = owner
-				owner = {
-					is_pleasure_seeker_empire = yes
-				}
-			}
-			name = fe_hedonist
-			desc = fe_hedonist
-			icon = fe_hedonist
-			building_icon = building_holo_theatres
-			weight = 5
-		}
 	}
 
 	resources = {
@@ -180,12 +165,10 @@ civilian_good = {
 		inline_script = "jobs/ethic_job_resources"
 	}
 
-	# Hedonists
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				is_pleasure_seeker_empire = no
 				NOT = {
 					has_valid_civic = civic_dystopian_society
 				}
@@ -193,19 +176,6 @@ civilian_good = {
 		}
 		planet_amenities_add = 50
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_pleasure_seeker_empire = yes
-			}
-			has_living_standard = {
-				type = living_standard_decadent
-			}
-		}
-		founder_species_growth_mult = 0.005 # Kept the variable. It's mostly harmless, it seems.
 	}
 
 	triggered_country_modifier = {
@@ -288,6 +258,109 @@ utopian = {
 			trade = 1
 		}
 		inline_script = "jobs/ethic_job_resources"
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_modifier = paragon_origin_strengthened_government_iii }
+		}
+		country_edict_fund_add = 1
+	}
+
+	inline_script = "jobs/ethic_job_modifiers"
+
+	weight = {
+		weight = 0
+	}
+}
+
+# Should never appear regular localisation
+civilian_hedonist = {
+	category = civilian
+	is_capped_by_modifier = no
+	count_as_available_for_ai = yes
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+		OR = {
+			NOT = {
+				owner = {
+					has_active_tradition = tr_virtuality_finish
+				}
+			}
+			has_virtual_species_trait = no
+		}
+		has_living_standard = { type = living_standard_decadent }
+		planet = { NOT = { is_planet_class = pc_cosmogenesis_world }  }
+	}
+
+	swappable_data = {
+		default = {
+			building_icon = building_residence
+		}
+		# Tourists
+		swap_type = {
+			trigger = {
+				exists = owner
+				has_modifier = resort_colony
+			}
+			name = tourist
+			desc = tourist_desc
+			icon = trader
+			building_icon = building_amusement_megaplex
+			weight = 6
+		}
+		# Hedonists
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_pleasure_seeker_empire = yes
+				}
+			}
+			name = fe_hedonist
+			desc = fe_hedonist
+			icon = fe_hedonist
+			building_icon = building_holo_theatres
+			weight = 5
+		}
+	}
+
+	resources = {
+		category = planet_civilians
+		produces = {
+			trade = 1
+			unity = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				has_modifier = resort_colony
+			}
+			trade = 1
+		}
+		inline_script = "jobs/ethic_job_resources"
+	}
+
+	# Inspired by the medic jobs
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		bonus_pop_growth_mult = 0.005
+		logistic_growth_mult = 0.005
 	}
 
 	triggered_country_modifier = {

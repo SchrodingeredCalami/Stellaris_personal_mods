@@ -244,9 +244,13 @@ citizenship_slavery = {
 			fail_text = "xeno_slaver"
 			NAND = {
 				is_same_species = from
-				is_xenophobe = yes
-				is_authoritarian = no
+				from = {
+					AND = {
+						is_xenophobe = yes
+						is_authoritarian = no
+					}
 				}
+			}
 		}
 		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"

@@ -812,7 +812,7 @@ slave_orderly = {
 
 	weight = {
 		weight = @special_job_weight
-		milt = value:mod_base_pop_job_weight_bonus|JOB|slave_orderly|POP_CAT|worker|
+		mult = value:mod_base_pop_job_weight_bonus|JOB|slave_orderly|POP_CAT|worker|
 	}
 }
 

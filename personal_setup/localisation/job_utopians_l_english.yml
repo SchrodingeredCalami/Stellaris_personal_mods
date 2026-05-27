@@ -9,3 +9,6 @@
  job_civilian_good_plural: "Welfare civilians"
  job_civilian_good_desc: "We shall extend a hand for those who fall"
  mod_job_civilian_good_add: "More to extend our help to"
+
+ last_citizen: "Last citizenship species of the empire."
+ xeno_slaver: "Slavery of lesser species only allowed."

@@ -1,0 +1,12 @@
+1. Hostile neighbor starbase fortification
+is_starbase_type
+opinion_level
+used_defense_platform_capacity_percent
+any_owned_starbase
+any_neighbor_system
+
+any_owned_starbase
+	is_starbase_type = sfortress
+	* Bordering rival
+	from = { opinion_level = { who = *rival level < neutral }}
+	used_defense_platform_capacity_percent < 1
