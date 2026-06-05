@@ -181,7 +181,7 @@ living_standard_utopian = {
 	}
 
 	ai_will_do = {
-		factor = 20
+		factor = 15
 		modifier = {
 			factor = 0
 			NOT = { has_citizenship_type = { country = from type = citizenship_full } }
@@ -189,15 +189,24 @@ living_standard_utopian = {
 		modifier = {
 			factor = 0
 			NOT = { has_living_standard = { country = from type = living_standard_utopian } }
-
-			from = {
-				resource_stockpile_compare = {
-					resource = consumer_goods
-					value < 1000
+			NOT = {
+				from = {
+					has_monthly_income = {
+						resource = minerals
+						value > 300
+					}
 				}
-				has_monthly_income = {
-					resource = consumer_goods
-					value < 10
+			}
+		}
+		modifier = {
+			factor = 0
+			has_living_standard = { country = from type = living_standard_utopian }
+			NOT = {
+				from = {
+					has_monthly_income = {
+						resource = minerals
+						value > 200
+					}
 				}
 			}
 		}
@@ -326,25 +335,37 @@ living_standard_good = {
 		factor = 5
 		modifier = {
 			factor = 0
-			NOR = {
-				has_citizenship_type = { country = from type = citizenship_full }
+			NOT = { has_citizenship_type = { country = from type = citizenship_full } }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				NOR = {
+					is_pacifist = yes
+					is_egalitarian = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_living_standard = { country = from type = living_standard_good } }
+			NOT = {
 				from = {
-					OR = {
-						is_pacifist = yes
-						is_authoritarian = yes
+					has_monthly_income = {
+						resource = minerals
+						value > 150
 					}
 				}
-				AND = {
-					NOT = { has_living_standard = { country = from type = living_standard_good } }
-					from = {
-						has_monthly_income = {
-							resource = consumer_goods
-							value < 10
-						}
-						resource_stockpile_compare = {
-							resource = consumer_goods
-							value < 1000
-						}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_living_standard = { country = from type = living_standard_good }
+			NOT = {
+				from = {
+					has_monthly_income = {
+						resource = minerals
+						value > 100
 					}
 				}
 			}
@@ -462,19 +483,32 @@ living_standard_decadent = {
 	}
 
 	ai_will_do = {
-		factor = 100
+		factor = 20
+		modifier = {
+			factor = 0
+			NOT = { has_citizenship_type = { country = from type = citizenship_full } }
+		}
 		modifier = {
 			factor = 0
 			NOT = { has_living_standard = { country = from type = living_standard_decadent } }
-			from = {
-				# The adjustment is only necessary until the AI budget catches up
-				resource_stockpile_compare = {
-					resource = consumer_goods
-					value < 1000
+			NOT = {
+				from = {
+					has_monthly_income = {
+						resource = minerals
+						value > 300
+					}
 				}
-				has_monthly_income = {
-					resource = consumer_goods
-					value < 10
+			}
+		}
+		modifier = {
+			factor = 0
+			has_living_standard = { country = from type = living_standard_decadent }
+			NOT = {
+				from = {
+					has_monthly_income = {
+						resource = minerals
+						value > 200
+					}
 				}
 			}
 		}

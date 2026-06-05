@@ -1,0 +1,92 @@
+
+pacifist_internal_pressure = {
+    OR = {
+        is_pacifist = yes
+        AND = {
+            has_faction = prosperity
+            is_militarist = no
+        }
+    }
+}
+
+militarist_internal_pressure = {
+    OR = {
+        is_militarist = yes
+        AND = {
+            has_faction = imperialist
+            is_pacifist = no
+        }
+    }
+}
+
+xenophobe_internal_pressure = {
+    OR = {
+        is_xenophobe = yes
+        AND = {
+            has_faction = supremacist
+            is_xenophile = no
+        }
+    }
+}
+
+xenophile_internal_pressure = {
+    OR = {
+        is_xenophile = yes
+        AND = {
+            has_faction = xenoist
+            is_xenophobe = no
+        }
+    }
+}
+
+egalitarian_internal_pressure = {
+    OR = {
+        is_egalitarian = yes
+        AND = {
+            has_faction = progressive
+            is_authoritarian = no
+        }
+    }
+}
+
+authoritarian_internal_pressure = {
+    OR = {
+        is_authoritarian = yes
+        AND = {
+            has_faction = totalitarian
+            is_egalitarian = no
+        }
+    }
+}
+
+materialist_internal_pressure = {
+    OR = {
+        is_materialist = yes
+        AND = {
+            has_faction = technologist
+            is_spiritualist = no
+        }
+    }
+}
+
+spiritualist_internal_pressure = {
+    OR = {
+        is_spiritualist = yes
+        AND = {
+            has_faction = traditionalist
+            is_materialist = no
+        }
+    }
+}
+
+# Altered xenophobe due to 2 factions
+isolationist_internal_pressure = {
+    OR = {
+        is_xenophobe = yes
+        AND = {
+            has_faction = isolationist
+            is_xenophile = no
+        }
+    }
+}
+

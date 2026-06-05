@@ -354,13 +354,12 @@ civilian_hedonist = {
 		inline_script = "jobs/ethic_job_resources"
 	}
 
-	# Inspired by the medic jobs
+	# Inspired by the medic jobs. Needs to adjust for machine main species.
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		bonus_pop_growth_mult = 0.005
-		logistic_growth_mult = 0.005
+		logistic_growth_mult = 0.005 # No organic pop assembly from hedonists was intentional.
 	}
 
 	triggered_country_modifier = {
