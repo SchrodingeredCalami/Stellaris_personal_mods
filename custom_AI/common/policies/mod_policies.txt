@@ -1065,10 +1065,7 @@ war_philosophy = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
-				}
+				is_pacifist = yes
 			}
 		}
 	}
@@ -1112,9 +1109,7 @@ war_philosophy = {
 				factor = 2
 				OR = {
 					has_valid_ai_personality = no
-					is_ai = no
 				}
-				has_ethic = "ethic_pacifist"
 			}
 			modifier = {
 				factor = 2
@@ -1148,19 +1143,16 @@ war_philosophy = {
 
 		AI_weight = {
 			modifier = {
-				factor = 5
-				OR = {
-					has_ethic = "ethic_fanatic_pacifist"
-					has_ethic = "ethic_pacifist"
-				}
-				
+				factor = 2
+				is_pacifist = yes
+			}
+			modifier = {
+				factor = 2
+				pacifist_internal_pressure = yes
 			}
 			modifier = {
 				factor = 0
-				NOR = { 
-					has_ethic = "ethic_fanatic_pacifist"
-					has_ethic = "ethic_pacifist"
-				}
+				pacifist_internal_pressure = no
 			}
 		}
 	}
@@ -1202,44 +1194,44 @@ subjugation_war_terms = {
 			weight = 10
 
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_xenophile
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_xenophile
+				xenophile_internal_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_egalitarian
+				egalitarian_internal_pressure = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_egalitarian
 			}
 
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_xenophobe
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_xenophobe
+				xenophobe_internal_pressure = yes
 			}
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_authoritarian
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_authoritarian
+				authoritarian_internal_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_militarist
+				militarist_internal_pressure = yes
 			}
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_militarist
 			}
 			modifier = {
@@ -1309,45 +1301,45 @@ subjugation_war_terms = {
 
 			# Bad people who probably not pick this.
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_xenophobe
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_xenophobe
+				xenophobe_internal_pressure = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_authoritarian
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_authoritarian
+				authoritarian_internal_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_militarist
+				militarist_internal_pressure = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_militarist
 			}
 
 			# Nice people who probably would.
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_xenophile
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_xenophile
+				xenophile_internal_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_egalitarian
+				egalitarian_internal_pressure = yes
 			}
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_egalitarian
 			}
 			modifier = {
@@ -1383,44 +1375,44 @@ subjugation_war_terms = {
 			weight = 10
 
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_xenophile
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_xenophile
+				xenophile_internal_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_egalitarian
+				egalitarian_internal_pressure = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_egalitarian
 			}
 
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_xenophobe
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_xenophobe
+				xenophobe_internal_pressure = yes
 			}
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_authoritarian
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_authoritarian
+				authoritarian_internal_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_militarist
+				militarist_internal_pressure = yes
 			}
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_militarist
 			}
 			modifier = {
@@ -1489,45 +1481,45 @@ subjugation_war_terms = {
 
 			# Bad people who probably not pick this.
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_xenophobe
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_xenophobe
+				xenophobe_internal_pressure = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_authoritarian
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_authoritarian
+				authoritarian_internal_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_militarist
+				militarist_internal_pressure = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.2
 				has_ethic = ethic_fanatic_militarist
 			}
 
 			# Nice people who probably would.
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_xenophile
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_xenophile
+				xenophile_internal_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				has_ethic = ethic_egalitarian
+				egalitarian_internal_pressure = yes
 			}
 			modifier = {
-				factor = 1.3
+				factor = 1.1
 				has_ethic = ethic_fanatic_egalitarian
 			}
 			modifier = {
@@ -1599,7 +1591,7 @@ resettlement = {
 			factor = 10
 			modifier = {
 				factor = 0
-				is_egalitarian = yes
+				egalitarian_internal_pressure = yes
 			}
 		}
 	}
@@ -1725,8 +1717,7 @@ leader_enhancement = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_ethic = "ethic_egalitarian"
-					has_ethic = "ethic_fanatic_egalitarian"
+					egalitarian_internal_pressure = yes
 				}
 				NOT = {
 					has_valid_ai_personality = yes
@@ -1757,10 +1748,7 @@ leader_enhancement = {
 		}
 
 		valid = {
-			NOR = {
-				has_ethic = "ethic_egalitarian"
-				has_ethic = "ethic_fanatic_egalitarian"
-			}
+			is_egalitarian = no
 		}
 
 		prerequisites = { tech_capacity_boosters }
@@ -1769,10 +1757,7 @@ leader_enhancement = {
 			factor = 3
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_egalitarian"
-					has_ethic = "ethic_fanatic_egalitarian"
-				}
+				egalitarian_internal_pressure = yes
 			}
 		}
 	}
@@ -1807,7 +1792,7 @@ first_contact_protocol = {
 		AI_weight = {
 			modifier = {
 				factor = 2
-				is_xenophile = yes
+				xenophile_internal_pressure = yes
 			}
 			modifier = {
 				factor = 2
@@ -1877,11 +1862,11 @@ first_contact_protocol = {
 		AI_weight = {
 			modifier = {
 				factor = 2
-				is_militarist = yes
+				militarist_internal_pressure = yes
 			}
 			modifier = {
 				factor = 2
-				is_xenophobe = yes
+				xenophobe_internal_pressure = yes
 			}
 			modifier = {
 				factor = 2
@@ -1889,7 +1874,7 @@ first_contact_protocol = {
 			}
 			modifier = {
 				factor = 0
-				is_pacifist = yes
+				pacifist_internal_pressure = yes
 			}
 		}
 	}
@@ -1957,7 +1942,7 @@ border_policy = {
 			modifier = {
 				factor = 0
 				has_valid_ai_personality = no
-				is_xenophobe = no
+				xenophobe_internal_pressure = no
 			}
 			modifier = {
 				factor = 10
@@ -2362,8 +2347,8 @@ population_controls = {
 			modifier = {
 				factor = 0
 				OR = {
-					is_egalitarian = yes
-					is_xenophile = yes
+					egalitarian_internal_pressure = yes
+					xenophile_internal_pressure = yes
 				}
 			}
 		}
