@@ -81,11 +81,11 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.5
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.5
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.2
@@ -93,7 +93,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.25
-				authoritarian_internal_pressure = yes
+				authoritarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 5.0 # Intentionally high value for despoilers/Nihilistic Acquisition
@@ -176,11 +176,11 @@ diplomatic_stance = {
 			# Remade ethics modifier based on factions
 			modifier = {
 				factor = 0
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 
 			# Nice people:
@@ -190,7 +190,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.5
-				xenophile_internal_pressure = yes
+				xenophile_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.3
@@ -207,11 +207,11 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.15
-				egalitarian_internal_pressure = yes
+				egalitarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.1
-				materialist_internal_pressure = yes
+				materialist_faction_pressure = yes
 			}
 
 			modifier = {
@@ -302,7 +302,7 @@ diplomatic_stance = {
 
 			modifier = {
 				factor = 2.0
-				isolationist_internal_pressure = yes
+				isolationist_faction_pressure = yes
 				# Militarist and authoritarian don't care as much for isolation.
 				is_militarist = no
 				is_authoritarian = no
@@ -464,7 +464,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.5
-				pacifist_internal_pressure = yes
+				pacifist_faction_pressure = yes
 			}
 		}
 	}
@@ -541,7 +541,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.5
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.5
@@ -554,7 +554,7 @@ diplomatic_stance = {
 			# Added xenophobes: they are also angry, especially with these traditions...
 			modifier = {
 				factor = 1.25
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.5
@@ -675,7 +675,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.5
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.25
@@ -684,7 +684,7 @@ diplomatic_stance = {
 			# added xenophobe because they don't like people
 			modifier = {
 				factor = 1.25
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 2
@@ -1148,11 +1148,11 @@ war_philosophy = {
 			}
 			modifier = {
 				factor = 2
-				pacifist_internal_pressure = yes
+				pacifist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0
-				pacifist_internal_pressure = no
+				pacifist_faction_pressure = no
 			}
 		}
 	}
@@ -1199,11 +1199,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.5
-				xenophile_internal_pressure = yes
+				xenophile_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				egalitarian_internal_pressure = yes
+				egalitarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.2
@@ -1216,7 +1216,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.15
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.1
@@ -1224,11 +1224,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.15
-				authoritarian_internal_pressure = yes
+				authoritarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.1
@@ -1306,7 +1306,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.5
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.2
@@ -1314,11 +1314,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.5
-				authoritarian_internal_pressure = yes
+				authoritarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.2
@@ -1332,11 +1332,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.15
-				xenophile_internal_pressure = yes
+				xenophile_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				egalitarian_internal_pressure = yes
+				egalitarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.1
@@ -1380,11 +1380,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.5
-				xenophile_internal_pressure = yes
+				xenophile_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				egalitarian_internal_pressure = yes
+				egalitarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.2
@@ -1397,7 +1397,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.15
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.1
@@ -1405,11 +1405,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.15
-				authoritarian_internal_pressure = yes
+				authoritarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.1
@@ -1486,7 +1486,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.5
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.2
@@ -1494,11 +1494,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.5
-				authoritarian_internal_pressure = yes
+				authoritarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.5
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 0.2
@@ -1512,11 +1512,11 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.15
-				xenophile_internal_pressure = yes
+				xenophile_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.15
-				egalitarian_internal_pressure = yes
+				egalitarian_faction_pressure = yes
 			}
 			modifier = {
 				factor = 1.1
@@ -1591,7 +1591,7 @@ resettlement = {
 			factor = 10
 			modifier = {
 				factor = 0
-				egalitarian_internal_pressure = yes
+				egalitarian_faction_pressure = yes
 			}
 		}
 	}
@@ -1717,7 +1717,7 @@ leader_enhancement = {
 			modifier = {
 				factor = 0
 				OR = {
-					egalitarian_internal_pressure = yes
+					egalitarian_faction_pressure = yes
 				}
 				NOT = {
 					has_valid_ai_personality = yes
@@ -1757,7 +1757,7 @@ leader_enhancement = {
 			factor = 3
 			modifier = {
 				factor = 0
-				egalitarian_internal_pressure = yes
+				egalitarian_faction_pressure = yes
 			}
 		}
 	}
@@ -1792,7 +1792,7 @@ first_contact_protocol = {
 		AI_weight = {
 			modifier = {
 				factor = 2
-				xenophile_internal_pressure = yes
+				xenophile_faction_pressure = yes
 			}
 			modifier = {
 				factor = 2
@@ -1862,11 +1862,11 @@ first_contact_protocol = {
 		AI_weight = {
 			modifier = {
 				factor = 2
-				militarist_internal_pressure = yes
+				militarist_faction_pressure = yes
 			}
 			modifier = {
 				factor = 2
-				xenophobe_internal_pressure = yes
+				xenophobe_faction_pressure = yes
 			}
 			modifier = {
 				factor = 2
@@ -1874,7 +1874,7 @@ first_contact_protocol = {
 			}
 			modifier = {
 				factor = 0
-				pacifist_internal_pressure = yes
+				pacifist_faction_pressure = yes
 			}
 		}
 	}
@@ -1942,7 +1942,7 @@ border_policy = {
 			modifier = {
 				factor = 0
 				has_valid_ai_personality = no
-				xenophobe_internal_pressure = no
+				xenophobe_faction_pressure = no
 			}
 			modifier = {
 				factor = 10
@@ -2347,8 +2347,8 @@ population_controls = {
 			modifier = {
 				factor = 0
 				OR = {
-					egalitarian_internal_pressure = yes
-					xenophile_internal_pressure = yes
+					egalitarian_faction_pressure = yes
+					xenophile_faction_pressure = yes
 				}
 			}
 		}

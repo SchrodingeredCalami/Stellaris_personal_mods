@@ -1,5 +1,5 @@
 
-pacifist_internal_pressure = {
+pacifist_faction_pressure = {
     OR = {
         is_pacifist = yes
         AND = {
@@ -9,7 +9,7 @@ pacifist_internal_pressure = {
     }
 }
 
-militarist_internal_pressure = {
+militarist_faction_pressure = {
     OR = {
         is_militarist = yes
         AND = {
@@ -19,7 +19,7 @@ militarist_internal_pressure = {
     }
 }
 
-xenophobe_internal_pressure = {
+xenophobe_faction_pressure = {
     OR = {
         is_xenophobe = yes
         AND = {
@@ -29,7 +29,7 @@ xenophobe_internal_pressure = {
     }
 }
 
-xenophile_internal_pressure = {
+xenophile_faction_pressure = {
     OR = {
         is_xenophile = yes
         AND = {
@@ -39,7 +39,7 @@ xenophile_internal_pressure = {
     }
 }
 
-egalitarian_internal_pressure = {
+egalitarian_faction_pressure = {
     OR = {
         is_egalitarian = yes
         AND = {
@@ -49,7 +49,7 @@ egalitarian_internal_pressure = {
     }
 }
 
-authoritarian_internal_pressure = {
+authoritarian_faction_pressure = {
     OR = {
         is_authoritarian = yes
         AND = {
@@ -59,7 +59,7 @@ authoritarian_internal_pressure = {
     }
 }
 
-materialist_internal_pressure = {
+materialist_faction_pressure = {
     OR = {
         is_materialist = yes
         AND = {
@@ -69,7 +69,7 @@ materialist_internal_pressure = {
     }
 }
 
-spiritualist_internal_pressure = {
+spiritualist_faction_pressure = {
     OR = {
         is_spiritualist = yes
         AND = {
@@ -80,7 +80,7 @@ spiritualist_internal_pressure = {
 }
 
 # Altered xenophobe due to 2 factions
-isolationist_internal_pressure = {
+isolationist_faction_pressure = {
     OR = {
         is_xenophobe = yes
         AND = {
