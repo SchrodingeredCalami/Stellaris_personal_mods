@@ -1,0 +1,54 @@
+
+# there is a trigger market_resource_price! We can make a true codependent environment!
+# can_buy_on_market, too!
+
+# can check if galactic market exist through galcom resolution check
+
+# remember resources can almost always be expended (food included for galcom market)
+# and we plan to make a high stockpile make the resource less attractive anyway
+
+# We want to make AI more ambitious overall economically.
+# It will have a positive economic goal until almost full reserve
+
+# check if resources production of economy is acceptable
+resource_acceptable_production = {
+    OR = {
+        AND = {
+            # -3% of stockpile as but more than 10% max stockpile.
+            has_monthly_income = {
+                resource = $RESOURCE$
+                value > value:resource_stockpile_fraction|RESOURCE|$RESOURCE$|FRACTION|-0.03|
+            }
+            resource_stockpile_compare = {
+                resource = $RESOURCE$
+                value > value:resource_maximum_fraction|RESOURCE|$RESOURCE$|FRACTION|0.1|
+            }
+        }
+        AND = {
+            # positive income but less than 90% max stockpile
+            has_monthly_income = {
+                resource = $RESOURCE$
+                value > 0
+            }
+            resource_stockpile_compare = {
+                resource = $RESOURCE$
+                value < value:resource_maximum_fraction|RESOURCE|$RESOURCE$|FRACTION|0.9|
+            }
+        }
+    }
+}
+
+fully_acceptable_economy = {
+    resource_acceptable_production = {RESOURCE: energy}
+    resource_acceptable_production = {RESOURCE: minerals}
+    resource_acceptable_production = {RESOURCE: alloys}
+
+    OR = {
+        country_uses_food = no
+        resource_acceptable_production = {RESOURCE: food}
+    }
+    OR = {
+        country_uses_consumer_goods = no
+        resource_acceptable_production = {RESOURCE: consumer_goods}
+    }
+}

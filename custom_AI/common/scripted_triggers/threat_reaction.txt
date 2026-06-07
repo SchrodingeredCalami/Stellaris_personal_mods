@@ -1,0 +1,7 @@
+
+
+# arms race to have fully defended nation
+# can't use threat. too tame for passive threats.
+military_emergency = {
+    
+}

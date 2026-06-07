@@ -1191,53 +1191,7 @@ subjugation_war_terms = {
 		}
 
 		ai_weight = {
-			weight = 10
-
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 0.5
-				xenophile_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.5
-				egalitarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_egalitarian
-			}
-
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 1.15
-				xenophobe_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.15
-				authoritarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.15
-				militarist_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_militarist
-			}
-			modifier = {
-				factor = 10
-				has_country_flag = oppressive_terms_preference
-			}
+			weight = value:oppressive_subjulgation_weight
 		}
 	}
 
@@ -1297,55 +1251,7 @@ subjugation_war_terms = {
 		}
 
 		ai_weight = {
-			weight = 10
-
-			# Bad people who probably not pick this.
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 0.5
-				xenophobe_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 0.5
-				authoritarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.5
-				militarist_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_militarist
-			}
-
-			# Nice people who probably would.
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 1.15
-				xenophile_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.15
-				egalitarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 10
-				has_country_flag = benevolent_terms_preference
-			}
+			weight = value:benevolent_subjulgation_weight
 		}
 	}
 
@@ -1372,53 +1278,7 @@ subjugation_war_terms = {
 		}
 
 		ai_weight = {
-			weight = 10
-
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 0.5
-				xenophile_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.5
-				egalitarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_egalitarian
-			}
-
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 1.15
-				xenophobe_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.15
-				authoritarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.15
-				militarist_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_militarist
-			}
-			modifier = {
-				factor = 10
-				has_country_flag = oppressive_terms_preference
-			}
+			weight = value:oppressive_subjulgation_weight
 		}
 	}
 
@@ -1477,55 +1337,7 @@ subjugation_war_terms = {
 		}
 
 		ai_weight = {
-			weight = 10
-
-			# Bad people who probably not pick this.
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 0.5
-				xenophobe_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 0.5
-				authoritarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.5
-				militarist_faction_pressure = yes
-			}
-			modifier = {
-				factor = 0.2
-				has_ethic = ethic_fanatic_militarist
-			}
-
-			# Nice people who probably would.
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 1.15
-				xenophile_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.15
-				egalitarian_faction_pressure = yes
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 10
-				has_country_flag = benevolent_terms_preference
-			}
+			weight = value:benevolent_subjulgation_weight
 		}
 	}
 }

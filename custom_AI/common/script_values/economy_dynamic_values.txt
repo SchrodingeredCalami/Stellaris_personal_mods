@@ -1,0 +1,25 @@
+
+# check effects as well.
+
+# ai economic limits to panic or go to negative values.
+# will be used in economic plans and triggers later to be ignored in wars.
+
+resource_stockpile_fraction = {
+    base = 0
+    export_resource_stockpile_to_variable = {
+        resource = $RESOURCE$
+        variable = $RESOURCE$_stockpile
+    }
+    add = $RESOURCE$_stockpile
+    multiply = $FRACTION$
+}
+
+resource_maximum_fraction = {
+    base = 0
+    export_resource_maximum_to_variable = {
+        resource = $RESOURCE$
+        variable = $RESOURCE$_max
+    }
+    add = $RESOURCE$_max
+    multiply = $FRACTION$
+}

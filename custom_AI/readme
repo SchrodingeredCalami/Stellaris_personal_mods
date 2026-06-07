@@ -4,14 +4,22 @@ Features done
 - 
 
 Pendent
-- Planet special designation decisions
+- AI planetary decisions
+  - Planet special designation decisions
 - More refined policies weight
 - Resolutions voting including opinions of opposers, not proposer
-- ! Economic plans
-  - Research
-  - Unity
-  - Military
-    - Include weights for every naval capacity income
+- ! Economic plans (override base ones!)
+  - more extreme economy. If there is a stockpile, deficits are not as bad.
+    - make the reaction be at percentages.
+      monthly income of -3% of current stockpile as economical concern
+      stockpiles at 10% max capacity are also concerns, unless in exceptions
+        (like military emergency)
+  - priority of economy over progress (scared of shortages)
+  - make a focus for the infinite value sinkholes
+    - Research
+    - Unity
+    - Military
+      - Include weights for every naval capacity income
 - ! Dynamic subjulgation proposals
 - ! AI trading and codependence / coexistence
 - Pacifists never wanting war even in a federation
@@ -21,3 +29,5 @@ Pendent
 - ! Defense platforms building and war economy (Starbases)
 - Traditions (stop them from building mindlessly)
 - Colony types
+  - Specialized research colonies (ex -> society research colony)
+  - Environmentalist variant (global environmental reserve)
