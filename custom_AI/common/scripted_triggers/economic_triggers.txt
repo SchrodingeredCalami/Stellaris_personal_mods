@@ -43,6 +43,12 @@ fully_acceptable_economy = {
     resource_acceptable_production = {RESOURCE: minerals}
     resource_acceptable_production = {RESOURCE: alloys}
 
+    resource_acceptable_production = {RESOURCE: trade}
+
+    resource_acceptable_production = {RESOURCE: volatile_motes}
+    resource_acceptable_production = {RESOURCE: exotic_gases}
+    resource_acceptable_production = {RESOURCE: rare_crystals}
+
     OR = {
         country_uses_food = no
         resource_acceptable_production = {RESOURCE: food}
