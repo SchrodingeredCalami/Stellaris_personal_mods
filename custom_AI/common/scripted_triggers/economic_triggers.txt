@@ -39,6 +39,8 @@ resource_acceptable_production = {
 }
 
 fully_acceptable_economy = {
+    # see strategic_resources/00_strategic_resources.txt for all other resources
+    # that still require adding
     resource_acceptable_production = {RESOURCE: energy}
     resource_acceptable_production = {RESOURCE: minerals}
     resource_acceptable_production = {RESOURCE: alloys}
