@@ -1,7 +1,7 @@
 # Base AI economic plans
 
 advanced_economy_plan = {
-	ai_weight = { weight = 0 }
+	ai_weight = { weight = 50 }
 		
 	income = {
 		energy = @economic_plan_advanced_energy_target

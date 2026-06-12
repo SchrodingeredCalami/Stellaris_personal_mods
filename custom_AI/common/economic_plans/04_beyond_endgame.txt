@@ -1,7 +1,7 @@
 # How in Zarqlan's name did you successfully complete the endgame economic plan?
 
 beyond_endgame_economy_plan = {
-	ai_weight = { weight = 0 }
+	ai_weight = { weight = 1 }
 		
 	income = {
 		energy = 300

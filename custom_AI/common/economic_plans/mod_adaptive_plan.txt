@@ -5,6 +5,7 @@ expansionist_economic_plan = {
 		weight = 0
 		modifier = {
 			add = 100
+			factor = 0 # disabling outside testing
 			NOT = { has_country_flag = has_encountered_other_empire }
 		}
 	}
@@ -12,7 +13,7 @@ expansionist_economic_plan = {
 
 adaptive_economic_plan = {
 	ai_weight = {
-		weight = 1000
+		# weight = 1000
+		weight = 0 # disabling outside testing
 	}
-	
 }

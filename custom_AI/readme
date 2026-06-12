@@ -10,6 +10,7 @@ Pendent
 - Resolutions voting including opinions of opposers, not proposer
 - ! Economic plans (override base ones!)
   - more extreme economy. If there is a stockpile, deficits are not as bad.
+    - enable adaptive plan for testing
     - make the reaction be at percentages.
       monthly income of -3% of current stockpile as economical concern
       stockpiles at 10% max capacity are also concerns, unless in exceptions
