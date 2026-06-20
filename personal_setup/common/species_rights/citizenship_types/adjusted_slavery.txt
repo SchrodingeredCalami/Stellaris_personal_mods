@@ -34,6 +34,13 @@ citizenship_limited = {
 			is_shackled_robot_species_rights = yes
 		}
 		is_disconnected_drone_pop = no
+		NOT = {
+			from = {
+				has_origin = origin_forever_cruise
+				NOT = { has_country_flag = forever_cruise_over }
+			}
+		}
+		NOT = { from = { has_origin = origin_nomadic_purger } }
 	}
 
 	allow = {
@@ -166,6 +173,10 @@ citizenship_slavery = {
 		}
 	}
 
+	pop_group_modifier = {
+		planet_pops_enslaved_consumer_goods_upkeep_mult = -0.50
+	}
+
 	potential = {
 		exists = from
 		NAND = {
@@ -186,6 +197,17 @@ citizenship_slavery = {
 			}
 		}
 		is_disconnected_drone_pop = no
+		NAND = {
+			from = {
+				has_origin = origin_forever_cruise
+				NOT = { has_country_flag = forever_cruise_over }
+			}
+			OR = {
+				is_founding_cruise_crew = yes
+				is_founding_cruise_passenger = yes
+			}
+		}
+		NOT = { from = { has_origin = origin_nomadic_purger } }
 	}
 
 	allow = {

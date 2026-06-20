@@ -1,4 +1,3 @@
     NGameplay = {
         LOGISTIC_CEILING_MAX = 50
-        HABITABILITY_AUTO_MIGRATION		= 0.40
     }
